@@ -93,12 +93,16 @@ Data safety, vérifier la disponibilité mondiale et enchaîner Play Games :
 ```bash
 tools/publish_google_play.sh \
   --aab app-release.aab \
-  --contact-email support@example.com \
-  --contact-website https://example.com \
+  --contact-email admin@audeladedonnees.fr \
+  --contact-website https://audeladedonnees.fr \
   --data-safety-csv play-data-safety.csv \
   --verify-all-countries \
   --play-games-app-id 123456789012
 ```
+Politique de confidentialité :
+`https://audeladedonnees.fr/legal/privacy` (champ dédié à renseigner dans Play
+Console).
+
 La sélection initiale de tous les pays, la politique de confidentialité, la
 classification du contenu et les déclarations légales restent à compléter dans
 Play Console : l'API Publishing standard ne permet pas de les écrire. Le script

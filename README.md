@@ -50,10 +50,13 @@ La clé de release n'est jamais versionnée. Son certificat possède le SHA-1 :
 `80:01:AD:B8:C5:4F:2A:98:DD:DD:FF:18:91:88:AF:81:E6:2B:B4:0A`.
 
 Secrets GitHub configurés : keystore encodé, mots de passe et alias de
-signature, compte de service Google Play. Le secret public
-`PLAY_CONTACT_EMAIL` reste obligatoire avant le premier lancement. Les secrets
-Play Games (`PLAY_GAMES_APP_ID`, `LEADERBOARD_XP`, `LEADERBOARD_STREAK`,
+signature, compte de service Google Play, e-mail public de support
+`admin@audeladedonnees.fr`, site de support et politique de confidentialité
+`https://audeladedonnees.fr/legal/privacy`. Les secrets Play Games
+(`PLAY_GAMES_APP_ID`, `LEADERBOARD_XP`, `LEADERBOARD_STREAK`,
 `ACHIEVEMENTS_CSV`) deviennent nécessaires pour activer le backend en release.
+L'ID numérique est attribué par Play Console lors de la création du projet Play
+Games Services et ne peut pas être généré localement.
 
 ## Vérification manuelle
 

@@ -35,9 +35,9 @@ Ce document sépare les constats techniques vérifiés des déclarations qui doi
 
 ## Informations encore obligatoires
 
-- Adresse e-mail publique de support.
-- URL publique de politique de confidentialité, également accessible depuis l'app
-  si Google l'exige pour les données Play Games.
+- Adresse e-mail publique de support : `admin@audeladedonnees.fr`.
+- URL publique de politique de confidentialité :
+  `https://audeladedonnees.fr/legal/privacy`.
 - CSV Data safety officiel exporté depuis Play Console, relu et approuvé par le
   propriétaire avant envoi avec `--data-safety-csv`.
 - Confirmation du public cible et des réponses de classification du contenu.
@@ -45,3 +45,17 @@ Ce document sépare les constats techniques vérifiés des déclarations qui doi
 
 Le script de publication peut envoyer le CSV Data safety et vérifier les pays,
 mais il ne soumet pas automatiquement les attestations non confirmées.
+
+## État d'automatisation
+
+- Les coordonnées publiques sont enregistrées comme secrets GitHub
+  `PLAY_CONTACT_EMAIL`, `PLAY_CONTACT_WEBSITE` et `PRIVACY_POLICY_URL`.
+- L'e-mail et le site de support sont appliqués par le workflow de publication.
+- L'URL de confidentialité doit être renseignée une première fois dans le champ
+  dédié de Play Console ; l'API Android Publisher ne permet pas de modifier ce
+  champ.
+- L'ID numérique Play Games est attribué par Google lors de la création/liaison
+  du projet Play Games Services. Il ne doit pas être inventé.
+- Le CSV Data safety doit partir du modèle exporté pour cette application dans
+  Play Console. Il ne peut être qualifié d'« approuvé » qu'après relecture et
+  validation par le propriétaire de l'application.
