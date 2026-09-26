@@ -6,7 +6,7 @@ Ce document sépare les constats techniques vérifiés des déclarations qui doi
 ## Constats vérifiés dans l'application
 
 - Package : `fr.audeladedonnees.examen.civique`
-- SDK cible : Android 35 ; SDK minimal : Android 24.
+- SDK cible : Android 36 ; SDK minimal : Android 24.
 - Aucune permission caméra, microphone, localisation, contacts, SMS ou stockage.
 - Aucune permission `com.google.android.gms.permission.AD_ID`.
 - Aucun SDK publicitaire ou de facturation intégré.
@@ -20,7 +20,9 @@ Ce document sépare les constats techniques vérifiés des déclarations qui doi
 ## Réponses proposées à confirmer dans Play Console
 
 - Contient des publicités : **Non**.
-- Utilise l'identifiant publicitaire : **Non**.
+- Utilise l'identifiant publicitaire : **Non**. La déclaration Advertising ID
+  dans Play Console doit donc être réglée sur « Non » ; ne pas ajouter la
+  permission `com.google.android.gms.permission.AD_ID`.
 - Accès à l'application : **Toutes les fonctionnalités principales sont accessibles
   sans identifiant ; la connexion Play Games est facultative**.
 - Fonctionnalités santé : **Aucune**.

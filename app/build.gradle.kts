@@ -23,7 +23,7 @@ val releaseSigningConfigured = listOf(
 val ciVersionCode = System.getenv("BUILD_NUMBER")?.toIntOrNull() ?: 1
 val ciVersionName = System.getenv("VERSION_NAME") ?: "1.0"
 
-android { namespace = "fr.audeladedonnees.examen.civique"; compileSdk = 35
+android { namespace = "fr.audeladedonnees.examen.civique"; compileSdk = 36
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
     signingConfigs {
         if (releaseSigningConfigured) {
@@ -36,7 +36,7 @@ android { namespace = "fr.audeladedonnees.examen.civique"; compileSdk = 35
         }
     }
     defaultConfig {
-        applicationId = "fr.audeladedonnees.examen.civique"; minSdk = 24; targetSdk = 35; versionCode = ciVersionCode; versionName = ciVersionName
+        applicationId = "fr.audeladedonnees.examen.civique"; minSdk = 24; targetSdk = 36; versionCode = ciVersionCode; versionName = ciVersionName
         // Remplacez par l'ID de votre jeu Play Console (12+ chiffres). En attendant,
         // la valeur "0" laisse l'app 100% hors-ligne sans jamais crasher.
         val playGamesAppId = playGamesProperty("PLAY_GAMES_APP_ID", "0")

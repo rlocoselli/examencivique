@@ -36,7 +36,7 @@ Tout est enregistré dans les préférences locales « quest » : aucune donnée
 
 ## Construction
 
-SDK Android 35, Java 17, Gradle installé : `gradle assembleDebug`.
+SDK Android 36, Java 17, Gradle installé : `gradle assembleDebug`.
 
 APK : `app/build/outputs/apk/debug/app-debug.apk`.
 
@@ -48,10 +48,11 @@ version et l'envoie avec le statut `completed` sur la piste Google Play
 `production`. Il peut aussi être lancé depuis `workflow_dispatch` après saisie
 de `production`.
 
-La toute première release doit d'abord être envoyée en examen depuis Play
-Console : Google n'autorise pas l'API à passer une application encore en
-brouillon global au statut `completed`. Les pushes suivants sont
-entièrement automatiques une fois cette première release acceptée.
+Tant que l'application est encore en brouillon global, le workflow place
+automatiquement la première release corrigée en brouillon Production, prête à
+être envoyée en examen depuis Play Console. Google n'autorise pas l'API à
+effectuer cette première soumission. Après son acceptation, les pushes suivants
+sont publiés automatiquement avec le statut `completed`.
 
 La clé de release n'est jamais versionnée. Son certificat possède le SHA-1 :
 `80:01:AD:B8:C5:4F:2A:98:DD:DD:FF:18:91:88:AF:81:E6:2B:B4:0A`.

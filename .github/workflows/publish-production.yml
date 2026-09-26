@@ -60,7 +60,11 @@ jobs:
           ACHIEVEMENTS_CSV: ${{ secrets.ACHIEVEMENTS_CSV }}
         run: |
           set -euo pipefail
-          build_number="$(date +%s)"
+          # The first uploaded bundle used a Unix timestamp (1790408057).
+          # Keep future codes just above it without consuming the remaining
+          # Android version-code range at timestamp speed.
+          version_code_base=1790408057
+          build_number=$((version_code_base + GITHUB_RUN_NUMBER))
           version_name="1.0.${GITHUB_RUN_NUMBER}"
           BUILD_NUMBER="$build_number" VERSION_NAME="$version_name" ./gradlew bundleRelease --no-daemon
 
@@ -88,13 +92,32 @@ jobs:
 
       - name: Publish to Google Play production
         run: |
-          python3 tools/upload_play_store.py \
-            --credentials "$RUNNER_TEMP/play-service-account.json" \
-            --package-name fr.audeladedonnees.examen.civique \
-            --metadata fastlane/metadata/android \
-            --track production \
-            --release-status completed \
+          set -euo pipefail
+          publish_args=(
+            --credentials "$RUNNER_TEMP/play-service-account.json"
+            --package-name fr.audeladedonnees.examen.civique
+            --metadata fastlane/metadata/android
+            --track production
             --aab app/build/outputs/bundle/release/app-release.aab
+          )
+
+          set +e
+          publish_output="$(python3 tools/upload_play_store.py \
+            "${publish_args[@]}" --release-status completed 2>&1)"
+          publish_status=$?
+          set -e
+          printf '%s\n' "$publish_output"
+
+          if (( publish_status != 0 )); then
+            if grep -Fq 'Only releases with status draft may be created on draft app' \
+              <<<"$publish_output"; then
+              echo '::warning::Google Play requires the first app release to remain a draft. Staging it for the one-time manual review.'
+              python3 tools/upload_play_store.py \
+                "${publish_args[@]}" --release-status draft
+            else
+              exit "$publish_status"
+            fi
+          fi
 
       - name: Upload signed bundle as workflow artifact
         if: always()
