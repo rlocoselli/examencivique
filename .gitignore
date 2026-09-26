@@ -1,0 +1,15 @@
+.gradle/
+.kotlin/
+.idea/
+.venv-play-games/
+__pycache__/
+*.pyc
+build/
+app/build/
+local.properties
+google-play.properties
+.secrets/*.json
+.secrets/*.jks
+.secrets/*.keystore
+.secrets/*.env
+tools/audio/piano.wav
