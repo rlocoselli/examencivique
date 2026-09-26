@@ -40,6 +40,21 @@ SDK Android 35, Java 17, Gradle installé : `gradle assembleDebug`.
 
 APK : `app/build/outputs/apk/debug/app-debug.apk`.
 
+## Publication Android
+
+Le workflow GitHub `Build and publish production` construit un AAB signé et
+l'envoie sur la piste Google Play `production` lors d'un tag `v*`, ou depuis
+`workflow_dispatch` après saisie de `production`.
+
+La clé de release n'est jamais versionnée. Son certificat possède le SHA-1 :
+`80:01:AD:B8:C5:4F:2A:98:DD:DD:FF:18:91:88:AF:81:E6:2B:B4:0A`.
+
+Secrets GitHub configurés : keystore encodé, mots de passe et alias de
+signature, compte de service Google Play. Le secret public
+`PLAY_CONTACT_EMAIL` reste obligatoire avant le premier lancement. Les secrets
+Play Games (`PLAY_GAMES_APP_ID`, `LEADERBOARD_XP`, `LEADERBOARD_STREAK`,
+`ACHIEVEMENTS_CSV`) deviennent nécessaires pour activer le backend en release.
+
 ## Vérification manuelle
 
 Tester une bonne réponse, confirmer l’avancée, vérifier le déplacement puis le retour du dé. Refaire avec une mauvaise réponse pour le recul. Vérifier le bouton Android Retour, chaque catégorie, le passage de case 20/40, l’arrivée avec moins de 15 réponses et le bilan en fin de banque.
