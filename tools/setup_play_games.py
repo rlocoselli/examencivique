@@ -41,8 +41,8 @@ LEADERBOARDS = [
 ]
 
 
-def localized(value: str) -> dict[str, object]:
-    return {"translations": [{"locale": "fr-FR", "value": value}]}
+def localized(value: str, locale: str) -> dict[str, object]:
+    return {"translations": [{"locale": locale, "value": value}]}
 
 
 def draft_name(item: dict[str, object]) -> str:
@@ -56,8 +56,8 @@ def draft_name(item: dict[str, object]) -> str:
     if not isinstance(translations, list):
         return ""
     for translation in translations:
-        if isinstance(translation, dict) and translation.get("locale") == "fr-FR":
-            return str(translation.get("value", ""))
+        if isinstance(translation, dict) and translation.get("value"):
+            return str(translation["value"])
     return ""
 
 
@@ -67,6 +67,11 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--app-id", required=True, help="ID numérique Play Games")
     parser.add_argument("--credentials", type=Path, default=DEFAULT_CREDENTIALS)
+    parser.add_argument(
+        "--locale",
+        default="fr-FR",
+        help="Langue activée dans le projet Play Games (défaut : fr-FR)",
+    )
     parser.add_argument(
         "--dry-run", action="store_true", help="Liste les créations sans appeler l’API"
     )
@@ -117,7 +122,7 @@ def main() -> int:
                         "scoreMin": "0",
                         "scoreMax": score_max,
                         "draft": {
-                            "name": localized(title),
+                            "name": localized(title, args.locale),
                             "scoreFormat": {
                                 "numberFormatType": "NUMERIC",
                                 "numDecimalPlaces": 0,
@@ -140,8 +145,8 @@ def main() -> int:
                         "achievementType": "STANDARD",
                         "initialState": "REVEALED",
                         "draft": {
-                            "name": localized(title),
-                            "description": localized(description),
+                            "name": localized(title, args.locale),
+                            "description": localized(description, args.locale),
                             "pointValue": 5,
                         },
                     },
