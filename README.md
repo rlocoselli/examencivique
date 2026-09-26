@@ -42,9 +42,16 @@ APK : `app/build/outputs/apk/debug/app-debug.apk`.
 
 ## Publication Android
 
-Le workflow GitHub `Build and publish production` construit un AAB signé et
-l'envoie sur la piste Google Play `production` lors d'un tag `v*`, ou depuis
-`workflow_dispatch` après saisie de `production`.
+À chaque push sur la branche `main`, le workflow GitHub
+`Build and publish production` construit un AAB signé avec un nouveau code de
+version et l'envoie avec le statut `completed` sur la piste Google Play
+`production`. Il peut aussi être lancé depuis `workflow_dispatch` après saisie
+de `production`.
+
+La toute première release doit d'abord être envoyée en examen depuis Play
+Console : Google n'autorise pas l'API à passer une application encore en
+brouillon global au statut `completed`. Les pushes suivants sont
+entièrement automatiques une fois cette première release acceptée.
 
 La clé de release n'est jamais versionnée. Son certificat possède le SHA-1 :
 `80:01:AD:B8:C5:4F:2A:98:DD:DD:FF:18:91:88:AF:81:E6:2B:B4:0A`.

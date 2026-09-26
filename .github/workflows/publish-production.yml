@@ -2,8 +2,8 @@ name: Build and publish production
 
 on:
   push:
-    tags:
-      - "v*"
+    branches:
+      - main
   workflow_dispatch:
     inputs:
       confirm_production:
@@ -61,11 +61,7 @@ jobs:
         run: |
           set -euo pipefail
           build_number="$(date +%s)"
-          if [[ "$GITHUB_REF_TYPE" == "tag" ]]; then
-            version_name="${GITHUB_REF_NAME#v}"
-          else
-            version_name="1.0.${GITHUB_RUN_NUMBER}"
-          fi
+          version_name="1.0.${GITHUB_RUN_NUMBER}"
           BUILD_NUMBER="$build_number" VERSION_NAME="$version_name" ./gradlew bundleRelease --no-daemon
 
       - name: Install Google Play API client
