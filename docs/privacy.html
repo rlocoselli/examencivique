@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité / Privacy Policy — Parcours citoyen</title>
+    <style>
+        :root {
+            --primary: #002395;
+            --secondary: #ed2939;
+            --text: #212529;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --border: #dee2e6;
+            --meta-bg: #eef2f7;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #00155a 100%);
+            color: white;
+            padding: 36px 32px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 1.9rem;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        header p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px;
+            background: #f1f4f9;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .lang-btn {
+            background: white;
+            border: 1px solid #ced4da;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .content {
+            padding: 32px;
+        }
+        .app-meta {
+            background: var(--meta-bg);
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 6px;
+            margin-bottom: 28px;
+            font-size: 0.95rem;
+        }
+        .app-meta p { margin-bottom: 4px; }
+        .app-meta p:last-child { margin-bottom: 0; }
+        .app-meta strong { color: var(--primary); }
+        h2 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin: 28px 0 12px 0;
+            border-bottom: 2px solid #eaedf3;
+            padding-bottom: 6px;
+        }
+        p, ul {
+            margin-bottom: 14px;
+        }
+        ul {
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        footer {
+            text-align: center;
+            padding: 24px;
+            background: #f8f9fa;
+            border-top: 1px solid var(--border);
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .lang-section { display: block; }
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Politique de Confidentialité / Privacy Policy</h1>
+        <p>Application « Parcours citoyen »</p>
+    </header>
+
+    <div class="lang-switch">
+        <button class="lang-btn active" id="btn-fr" onclick="showLang('fr')">Français (FR)</button>
+        <button class="lang-btn" id="btn-en" onclick="showLang('en')">English (EN)</button>
+        <button class="lang-btn" id="btn-all" onclick="showLang('all')">Les deux / Both</button>
+    </div>
+
+    <div class="content">
+
+        <!-- ==================== VERSION FRANÇAISE ==================== -->
+        <div id="section-fr" class="lang-section">
+            <div class="app-meta">
+                <p><strong>Application :</strong> Parcours citoyen</p>
+                <p><strong>Package Name :</strong> <code>fr.audeladedonnees.examen.civique</code></p>
+                <p><strong>Éditeur / Responsable de traitement :</strong> Au-delà des données</p>
+                <p><strong>Contact support & DPO :</strong> <a href="mailto:admin@audeladedonnees.fr">admin@audeladedonnees.fr</a></p>
+                <p><strong>Site web :</strong> <a href="https://audeladedonnees.fr" target="_blank" rel="noopener">https://audeladedonnees.fr</a></p>
+                <p><strong>Dernière mise à jour :</strong> 26 septembre 2026</p>
+                <p><strong>Conformité légale :</strong> Règlement Général sur la Protection des Données (RGPD - Règlement UE 2016/679) & Politiques Google Play.</p>
+            </div>
+
+            <h2>1. Introduction et engagement</h2>
+            <p>
+                La présente politique de confidentialité informe les utilisateurs de l'application mobile <strong>« Parcours citoyen »</strong> (identifiant : <code>fr.audeladedonnees.examen.civique</code>) sur la protection et le traitement de leurs données personnelles.
+            </p>
+            <p>
+                Nous appliquons les principes de <em>Privacy by Design</em> (protection dès la conception) et de minimisation des données prévus par le RGPD.
+            </p>
+
+            <h2>2. Données personnelles traitées</h2>
+            <ul>
+                <li><strong>Fonctionnement autonome et hors ligne :</strong> L'application ne nécessite aucune création de compte nominatif, adresse e-mail ou mot de passe. Votre progression (XP, séries, couronnes, niveau) est conservée <strong>exclusivement en local</strong> sur votre terminal Android (mémoire interne SharedPreferences).</li>
+                <li><strong>Absence de traceurs et de publicité :</strong> L'application ne contient aucune publicité, ne collecte aucun identifiant publicitaire (Google Advertising ID) et ne suit aucune activité utilisateur à des fins commerciales ou marketing.</li>
+                <li><strong>Absence d'autorisations intrusives :</strong> L'application ne requiert aucun accès à votre carnet d'adresses, localisation GPS, appareil photo, microphone, SMS ou stockage externe.</li>
+            </ul>
+
+            <h2>3. Service tiers optionnel : Google Play Games Services v2</h2>
+            <p>
+                Une connexion facultative aux services Google Play Games (Google Ireland Limited / Google LLC) est disponible pour les joueurs qui le désirent :
+            </p>
+            <ul>
+                <li><strong>Finalités :</strong> Sauvegarde cloud de la progression (instantané <code>quest-save</code>), validation de 12 succès (achievements) et publication des scores sur 2 classements (leaderboards).</li>
+                <li><strong>Base légale (RGPD art. 6.1.a) :</strong> Le consentement de l'utilisateur, qui choisit volontairement de se connecter via son compte Google.</li>
+                <li><strong>Données concernées :</strong> Identifiant de joueur Google (pseudonyme de jeu fourni par Google), score et avancement des badges. Ces données transitent directement par les serveurs sécurisés de Google sans hébergement sur des serveurs tiers.</li>
+                <li><strong>Règles Google :</strong> Le traitement est soumis aux <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Règles de confidentialité de Google</a>.</li>
+            </ul>
+
+            <h2>4. Conservation et suppression des données</h2>
+            <ul>
+                <li><strong>Données locales :</strong> Vous pouvez réinitialiser votre progression directement dans le jeu, effacer les données via les paramètres Android de l'appareil (<em>Paramètres &gt; Applications &gt; Parcours citoyen &gt; Stockage &gt; Effacer les données</em>), ou en désinstallant l'application.</li>
+                <li><strong>Données Play Games :</strong> Vous pouvez dissocier votre profil et supprimer vos données de sauvegarde cloud via l'application mobile <em>Google Play Jeux</em> (<em>Paramètres &gt; Supprimer le compte Play Jeux et les données</em>).</li>
+            </ul>
+
+            <h2>5. Vos droits au titre du RGPD</h2>
+            <p>
+                Conformément aux articles 15 à 22 du RGPD, vous disposez des droits d'accès, de rectification, d'effacement (« droit à l'oubli »), de limitation et d'opposition au traitement de vos données.
+            </p>
+            <p>
+                Pour toute demande relative à vos données :<br>
+                📧 <strong>Contact :</strong> <a href="mailto:admin@audeladedonnees.fr">admin@audeladedonnees.fr</a>
+            </p>
+            <p>
+                Vous conservez également le droit d'adresser une réclamation auprès de l'autorité de protection des données compétente (la <strong>CNIL</strong> en France : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>).
+            </p>
+
+            <h2>6. Avertissement</h2>
+            <p>
+                « Parcours citoyen » est une application éducative et d'entraînement indépendante. Elle ne constitue pas un document administratif officiel ni une émanation du gouvernement français.
+            </p>
+        </div>
+
+        <!-- ==================== ENGLISH VERSION ==================== -->
+        <div id="section-en" class="lang-section" style="margin-top: 36px; border-top: 2px dashed var(--border); padding-top: 28px;">
+            <div class="app-meta">
+                <p><strong>Application:</strong> Parcours citoyen</p>
+                <p><strong>Package Name:</strong> <code>fr.audeladedonnees.examen.civique</code></p>
+                <p><strong>Publisher / Data Controller:</strong> Au-delà des données</p>
+                <p><strong>Contact & DPO:</strong> <a href="mailto:admin@audeladedonnees.fr">admin@audeladedonnees.fr</a></p>
+                <p><strong>Website:</strong> <a href="https://audeladedonnees.fr" target="_blank" rel="noopener">https://audeladedonnees.fr</a></p>
+                <p><strong>Last updated:</strong> September 26, 2026</p>
+                <p><strong>Compliance:</strong> General Data Protection Regulation (GDPR - EU 2016/679) & Google Play Developer Policies.</p>
+            </div>
+
+            <h2>1. Introduction and Commitment</h2>
+            <p>
+                This Privacy Policy describes how personal data is handled when using the mobile application <strong>"Parcours citoyen"</strong> (package: <code>fr.audeladedonnees.examen.civique</code>).
+            </p>
+            <p>
+                We are committed to data privacy and fully adhere to data minimization and privacy-by-design principles under the European GDPR (Regulation EU 2016/679).
+            </p>
+
+            <h2>2. Personal Data Processed</h2>
+            <ul>
+                <li><strong>Fully Functional Offline:</strong> The game does not require creating an account, email registration, or providing any personal identity details. Your gaming progress (XP, streaks, crowns, levels) is stored <strong>locally only</strong> on your Android device (internal SharedPreferences).</li>
+                <li><strong>No Advertising or Trackers:</strong> The application contains no advertising SDKs, does not collect Google Advertising ID (AAID), and performs no commercial user profiling or behavioral tracking.</li>
+                <li><strong>No Sensitive Permissions:</strong> No access to location, camera, microphone, contacts, SMS, or shared storage is requested.</li>
+            </ul>
+
+            <h2>3. Optional Third-Party Service: Google Play Games Services v2</h2>
+            <p>
+                An optional connection to Google Play Games (Google Ireland Limited / Google LLC) is available:
+            </p>
+            <ul>
+                <li><strong>Purposes:</strong> Cloud backup of game progress (snapshot <code>quest-save</code>), unlocking 12 achievements, and posting high scores to 2 leaderboards.</li>
+                <li><strong>Legal Basis (GDPR Art. 6.1.a):</strong> User consent, provided explicitly when you choose to connect your Google account.</li>
+                <li><strong>Data Involved:</strong> Google Gamer ID, game achievement progress, and accumulated scores. We do not host or transfer this data to private third-party servers.</li>
+                <li><strong>Google Policies:</strong> Governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+            </ul>
+
+            <h2>4. Data Retention and Deletion</h2>
+            <ul>
+                <li><strong>Local Data:</strong> You can erase all game data at any time via in-game settings, Android system settings (<em>Settings &gt; Apps &gt; Parcours citoyen &gt; Storage &gt; Clear Data</em>), or by uninstalling the application.</li>
+                <li><strong>Play Games Data:</strong> You can disconnect and delete cloud progress via the <em>Google Play Games</em> app (<em>Settings &gt; Delete Play Games account & data</em>).</li>
+            </ul>
+
+            <h2>5. Your Rights under GDPR</h2>
+            <p>
+                Under GDPR Articles 15 to 22, you have the right to access, rectify, delete ("right to be forgotten"), restrict, and object to the processing of your data, or withdraw consent at any time.
+            </p>
+            <p>
+                To exercise any of these rights, contact:<br>
+                📧 <strong>Support / DPO:</strong> <a href="mailto:admin@audeladedonnees.fr">admin@audeladedonnees.fr</a>
+            </p>
+            <p>
+                You also have the right to lodge a complaint with your supervisory data protection authority (in France, the <strong>CNIL</strong>: <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>).
+            </p>
+
+            <h2>6. Disclaimer</h2>
+            <p>
+                "Parcours citoyen" is an independent training and educational application. It does not represent an official administrative body or the French government.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Au-delà des données. Tous droits réservés / All rights reserved.</p>
+        <p>Package: <code>fr.audeladedonnees.examen.civique</code> — Contact: <a href="mailto:admin@audeladedonnees.fr">admin@audeladedonnees.fr</a></p>
+    </footer>
+</div>
+
+<script>
+    function showLang(lang) {
+        const secFr = document.getElementById('section-fr');
+        const secEn = document.getElementById('section-en');
+        const btnFr = document.getElementById('btn-fr');
+        const btnEn = document.getElementById('btn-en');
+        const btnAll = document.getElementById('btn-all');
+
+        [btnFr, btnEn, btnAll].forEach(b => b.classList.remove('active'));
+
+        if (lang === 'fr') {
+            secFr.classList.remove('hidden');
+            secEn.classList.add('hidden');
+            btnFr.classList.add('active');
+        } else if (lang === 'en') {
+            secFr.classList.add('hidden');
+            secEn.classList.remove('hidden');
+            btnEn.classList.add('active');
+        } else {
+            secFr.classList.remove('hidden');
+            secEn.classList.remove('hidden');
+            btnAll.classList.add('active');
+        }
+    }
+</script>
+
+</body>
+</html>
