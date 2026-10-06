@@ -40,7 +40,7 @@ android { namespace = "fr.audeladedonnees.examen.civique"; compileSdk = 36
         // Remplacez par l'ID de votre jeu Play Console (12+ chiffres). En attendant,
         // la valeur "0" laisse l'app 100% hors-ligne sans jamais crasher.
         val playGamesAppId = playGamesProperty("PLAY_GAMES_APP_ID", "0")
-        manifestPlaceholders["playGamesAppId"] = playGamesAppId
+        resValue("string", "play_games_app_id", playGamesAppId)
         buildConfigField("String", "PLAY_GAMES_APP_ID", "\"$playGamesAppId\"")
         // IDs Play Console (classements / succès) : remplacez par les vôtres.
         // Valeurs vides = fonctionnalité désactivée proprement (jeu local conservé).
@@ -61,6 +61,7 @@ android { namespace = "fr.audeladedonnees.examen.civique"; compileSdk = 36
 }
 
 dependencies {
+    testImplementation("junit:junit:4.13.2")
     implementation(platform("androidx.compose:compose-bom:2025.08.01"))
     implementation("androidx.activity:activity-compose:1.10.1")
     implementation("androidx.compose.ui:ui")

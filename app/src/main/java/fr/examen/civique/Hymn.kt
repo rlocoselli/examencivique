@@ -53,7 +53,8 @@ class PianoController(private val context: Context) {
 }
 
 @Composable fun WithPiano(content: @Composable () -> Unit) {
-    val activity = LocalContext.current as ComponentActivity
+    val activity = androidx.activity.compose.LocalActivity.current as? ComponentActivity
+        ?: error("Le piano nécessite une ComponentActivity")
     val piano = remember { PianoController(activity.applicationContext) }
     DisposableEffect(piano) {
         val observer = LifecycleEventObserver { _, event ->

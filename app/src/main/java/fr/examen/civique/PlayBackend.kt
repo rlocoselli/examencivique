@@ -15,6 +15,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
+import kotlinx.coroutines.withTimeout
+import kotlinx.coroutines.CancellationException
+import com.google.android.gms.common.api.ApiException
 import org.json.JSONObject
 
 /**
@@ -53,32 +56,54 @@ object PlayBackend {
         catch (t: Throwable) { lastError = t.message }
     }
 
-    suspend fun silentSignIn(activity: Activity): Boolean = withContext(Dispatchers.Main) {
-        if (!configured()) return@withContext false
-        return@withContext try {
-            val auth = PlayGames.getGamesSignInClient(activity).isAuthenticated.await()
-            connected = auth.isAuthenticated
-            if (connected) playerName =
-                PlayGames.getPlayersClient(activity).currentPlayer.await()?.displayName
-            connected
-        } catch (t: Throwable) { lastError = t.message; false }
+    private fun authError(t: Throwable): String = when (t) {
+        is kotlinx.coroutines.TimeoutCancellationException -> "La connexion a pris trop de temps. Vérifiez votre réseau et réessayez."
+        is ApiException -> when (t.statusCode) {
+            7 -> "Connexion internet indisponible. Réessayez lorsque le réseau est rétabli."
+            10 -> "Google Play Games ne reconnaît pas cette version de l’application. Vérifiez la configuration du jeu et la signature de l’APK dans Play Console."
+            12501 -> "Connexion annulée. Vous pouvez continuer à jouer ou réessayer."
+            else -> "Google Play Games est indisponible (code ${t.statusCode}). Vérifiez votre compte Play Games et réessayez."
+        }
+        else -> "Impossible de se connecter à Google Play Games. Vérifiez votre connexion et votre compte, puis réessayez."
     }
 
-    suspend fun signIn(activity: Activity): Boolean = withContext(Dispatchers.Main) {
-        if (!configured()) return@withContext false
-        return@withContext try {
-            val result = PlayGames.getGamesSignInClient(activity).signIn().await()
+    suspend fun silentSignIn(activity: Activity): Boolean = authenticate(activity, false)
+    suspend fun signIn(activity: Activity): Boolean = authenticate(activity, true)
+
+    private suspend fun authenticate(activity: Activity, interactive: Boolean): Boolean = withContext(Dispatchers.Main) {
+        if (!configured()) {
+            lastError = "Google Play Games n’est pas configuré pour cette version."
+            return@withContext false
+        }
+        lastError = null
+        try {
+            val auth = PlayGames.getGamesSignInClient(activity)
+            val result = withTimeout(30_000) {
+                if (interactive) auth.signIn().await() else auth.isAuthenticated.await()
+            }
             connected = result.isAuthenticated
             if (connected) {
-                playerName = PlayGames.getPlayersClient(activity).currentPlayer.await()?.displayName
-                pushScores(activity)
+                // A profile lookup failure must not invalidate successful authentication.
+                playerName = try { withTimeout(10_000) { PlayGames.getPlayersClient(activity).currentPlayer.await()?.displayName } }
+                    catch (t: kotlinx.coroutines.TimeoutCancellationException) { null }
+                    catch (t: CancellationException) { throw t }
+                    catch (_: Exception) { null }
+                if (interactive) pushScores(activity)
+            } else {
+                playerName = null
+                if (interactive) lastError = "Connexion non terminée. Ouvrez Google Play Games pour vérifier votre profil, puis réessayez."
             }
             connected
-        } catch (t: Throwable) { lastError = t.message; false }
+        } catch (t: kotlinx.coroutines.TimeoutCancellationException) {
+            connected = false; playerName = null; lastError = authError(t); false
+        } catch (t: CancellationException) { throw t }
+        catch (t: Exception) {
+            connected = false; playerName = null; lastError = authError(t); false
+        }
     }
 
     fun signOut(done: () -> Unit = {}) {
-        connected = false; playerName = null; done()
+        connected = false; playerName = null; lastError = null; done()
     }
 
     fun pushScores(activity: Activity, xp: Int = -1, streak: Int = -1) {
@@ -142,10 +167,14 @@ object PlayBackend {
         try {
             val snaps = PlayGames.getSnapshotsClient(activity)
             val opened = snaps.open(SNAPSHOT_NAME, true, SnapshotsClient.RESOLUTION_POLICY_MOST_RECENTLY_MODIFIED).await()
-            val data = opened.data?.let { runCatching { it.snapshotContents.readFully() }.getOrNull() }
-            if (data != null && data.isNotEmpty()) store.mergeCloud(JSONObject(String(data)))
+            val snapshot = opened.data
+            val data = snapshot?.let { runCatching { it.snapshotContents.readFully() }.getOrNull() }
+            if (snapshot != null) snaps.discardAndClose(snapshot).await()
+            if (data != null && data.isNotEmpty()) withContext(Dispatchers.Main) { store.mergeCloud(JSONObject(String(data))) }
             withContext(Dispatchers.Main) { syncing = false }
             true
-        } catch (t: Throwable) { withContext(Dispatchers.Main) { syncing = false; lastError = t.message }; false }
+        } catch (t: CancellationException) { throw t }
+        catch (t: Exception) { withContext(Dispatchers.Main) { lastError = "Connexion réussie, mais la sauvegarde cloud est indisponible. Votre progression reste sur cet appareil." }; false }
+        finally { withContext(kotlinx.coroutines.NonCancellable + Dispatchers.Main) { syncing = false } }
     }
 }

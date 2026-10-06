@@ -217,7 +217,7 @@ class ProgressStore(context: Context) {
             bestRank = prefs.getInt("weekBestRank", 0),
             totalCorrect = prefs.getInt("totalCorrect", 0), totalAnswered = prefs.getInt("totalAnswered", 0),
             totalRuns = prefs.getInt("runs", 0), perfectRuns = prefs.getInt("perfectRuns", 0),
-            crowns = (0 until 6).map { crownsOf(it) },
+            crowns = modes.indices.map { crownsOf(it) },
             badges = prefs.getStringSet("badges", emptySet()).orEmpty(),
             claimed = prefs.getStringSet("claimed", emptySet()).orEmpty()
         )
@@ -361,7 +361,7 @@ class ProgressStore(context: Context) {
             .putInt("answered", maxOf(prefs.getInt("answered", 0), i("answered")))
             .putInt("runs", maxOf(prefs.getInt("runs", 0), i("runs")))
             .putStringSet("badges", badges)
-        for (m in 0..5) edit.putInt("best$m", maxOf(prefs.getInt("best$m", 0), json.optInt("best$m", 0)))
+        for (m in modes.indices) edit.putInt("best$m", maxOf(prefs.getInt("best$m", 0), json.optInt("best$m", 0)))
         edit.apply()
         progress = read()
     }
@@ -374,9 +374,7 @@ class ProgressStore(context: Context) {
         .put("weekXp", prefs.getInt("weekXp", 0)).put("correct", prefs.getInt("correct", 0))
         .put("answered", prefs.getInt("answered", 0)).put("runs", prefs.getInt("runs", 0))
         .put("badges", org.json.JSONArray(prefs.getStringSet("badges", emptySet()).orEmpty().toList()))
-        .put("best0", prefs.getInt("best0", 0)).put("best1", prefs.getInt("best1", 0))
-        .put("best2", prefs.getInt("best2", 0)).put("best3", prefs.getInt("best3", 0))
-        .put("best4", prefs.getInt("best4", 0)).put("best5", prefs.getInt("best5", 0))
+        .apply { for (m in modes.indices) put("best$m", prefs.getInt("best$m", 0)) }
 
     /** Distribue automatiquement quêtes du jour, coffre, objectif quotidien et succès. */
     private fun commit(events: MutableList<GameEvent>) {

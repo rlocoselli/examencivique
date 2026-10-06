@@ -8,6 +8,10 @@ import androidx.compose.animation.core.tween
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.CubicBezierEasing
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.border
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.text.font.FontFamily
+import kotlinx.coroutines.withTimeoutOrNull
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -25,6 +29,7 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
@@ -41,14 +46,15 @@ private val Mint = Color(0xFF64D9BA)
 private val Blue = Color(0xFF456CEA)
 private val Red = Color(0xFFE86472)
 private val chapters = listOf("La côte Atlantique", "Des Pyrénées aux Alpes", "Cap sur Paris")
-private val modes = listOf("Tour de France", "République", "Histoire & géographie", "Institutions", "Vie quotidienne", "La Marseillaise")
-private fun pool(mode: Int): List<Question> = (questions + extraQuestions + moreQuestions + hymnQuestions).filter {
+val modes = listOf("Tour de France", "République", "Histoire & géographie", "Institutions", "Vie quotidienne", "La Marseillaise", "Grammaire", "Littérature", "Régions & paysages", "Gastronomie", "Examen civique")
+private fun pool(mode: Int): List<Question> = (questions + extraQuestions + moreQuestions + hymnQuestions + (cultureBank + civicBank).map { Question(it.category, it.text, it.answers, 0) }).filter {
     when (mode) {
         1 -> it.kind in listOf("ESSENTIEL", "RÉPUBLIQUE", "PIÈGE")
         2 -> it.kind in listOf("HISTOIRE", "GÉOGRAPHIE")
         3 -> it.kind in listOf("INSTITUTIONS", "DROITS / DEVOIRS")
         4 -> it.kind in listOf("SITUATION", "VIE PRATIQUE", "BONUS")
         5 -> it.kind == "HYMNE"
+        in 6..10 -> it.kind == modes[mode]
         else -> true
     }
 }.distinctBy { it.text }
@@ -75,6 +81,11 @@ private fun pool(mode: Int): List<Question> = (questions + extraQuestions + more
                 }
             } else if (mode == -2) HymnScreen({ mode = -1 }, { mode = 5; session++ })
             else if (mode == -3) HubScreen(hubTab) { mode = -1 }
+            else if (mode == -4) CivicMenu { route -> mode = when (route) { "civic-practice" -> -5; "civic-test" -> -6; else -> -1 }; session++ }
+            else if (mode in -7..-5) key(session) {
+                BackHandler { mode = if (mode == -7) -1 else -4 }
+                AdditionalQuiz(when (mode) { -5 -> "civic-practice"; -6 -> "civic-test"; else -> "photos" }) { mode = if (mode == -7) -1 else -4 }
+            }
             else if (mode < 0) QuestMenu({ mode = it; session++ }, { hubTab = it; mode = -3 })
             else key(session) { Adventure(mode, { mode = -1 }, { session++ }) }
         }
@@ -83,18 +94,35 @@ private fun pool(mode: Int): List<Question> = (questions + extraQuestions + more
 
 @Composable private fun QuestMenu(start: (Int) -> Unit, openHub: (Int) -> Unit) {
     val context = LocalContext.current
-    val activity = context as? android.app.Activity
+    val activity = androidx.activity.compose.LocalActivity.current
     val store = LocalProgress.current
     val scope = rememberCoroutineScope()
     var signingIn by remember { mutableStateOf(false) }
     val prefs = remember { context.getSharedPreferences("quest", 0) }
     val progress = store.progress
+    ReviewPrompt()
     Surface(Modifier.fillMaxSize(), color = Navy) {
         Column(Modifier.safeDrawingPadding().verticalScroll(rememberScrollState()).padding(20.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
-            Text("🇫🇷  PARCOURS CITOYEN", color = Gold, fontWeight = FontWeight.Bold)
-            Text("La France vous\nattend !", fontSize = 38.sp, lineHeight = 42.sp, fontWeight = FontWeight.Black)
+            Row(Modifier.fillMaxWidth().height(3.dp)) {
+                listOf(Blue, Color.White, Red).forEach { Box(Modifier.weight(1f).fillMaxHeight().background(it)) }
+            }
+            Text("🇫🇷  PARCOURS CITOYEN", color = Gold, fontWeight = FontWeight.Bold, letterSpacing = 2.sp)
+            Text("La France vous\nattend !", fontSize = 38.sp, lineHeight = 42.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Serif)
             Text("${pool(0).size} questions • 3 cartes • 60 cases", color = Mint)
             Text("Un voyage pour apprendre, une case à la fois.")
+            Card(onClick = { start(-4) }, shape = RoundedCornerShape(24.dp),
+                modifier = Modifier.fillMaxWidth().border(1.dp, Gold.copy(alpha = .6f), RoundedCornerShape(24.dp))) {
+                Column(Modifier.fillMaxWidth().background(Brush.linearGradient(listOf(Color(0xFF234676), Navy))).padding(22.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                    Text("À LA UNE  •  EXAMEN CIVIQUE CSP", color = Gold, fontSize = 11.sp, letterSpacing = 1.sp, fontWeight = FontWeight.Bold)
+                    Text("Examen civique", fontSize = 30.sp, fontFamily = FontFamily.Serif, color = Color.White)
+                    Text("${civicBank.size} questions de connaissance publiées par le ministère. Choix et corrections pédagogiques.", color = Color(0xFFD6E2F3), lineHeight = 22.sp)
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        SuggestionChip(onClick = { start(-5) }, label = { Text("Réviser", color = Color.White) })
+                        SuggestionChip(onClick = { start(-6) }, label = { Text("40 questions · 45 min", color = Color.White) })
+                    }
+                    Text("Découvrir la préparation →", color = Gold, fontWeight = FontWeight.Bold)
+                }
+            }
             GameBar()
             LevelBar()
             Card(colors = CardDefaults.cardColors(containerColor = Color(0xFF203653)), modifier = Modifier.fillMaxWidth()) {
@@ -111,21 +139,27 @@ private fun pool(mode: Int): List<Question> = (questions + extraQuestions + more
             if (PlayBackend.configured()) {
                 Card(modifier = Modifier.fillMaxWidth()) {
                     Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                        Text(if (PlayBackend.connected) "Connecté : ${PlayBackend.playerName ?: "joueur Play"}" else "Google Play Games", fontWeight = FontWeight.Bold)
+                        Text(if (PlayBackend.connected) "● ${PlayBackend.playerName ?: "Connecté à Play Games"}" else "Google Play Games", fontWeight = FontWeight.Bold)
+                        Text(if (PlayBackend.syncing) "Synchronisation en cours…" else if (PlayBackend.connected) "Vos succès et classements vous accompagnent." else "Connectez votre profil pour retrouver vos succès et classements.", fontSize = 12.sp, color = Color(0xFFBAC9DF))
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             if (!PlayBackend.connected) {
                                 Button(onClick = {
                                     val a = activity ?: return@Button
                                     signingIn = true
                                     scope.launch {
-                                        try { if (PlayBackend.signIn(a)) PlayBackend.pullCloud(a, store) }
+                                        try {
+                                            if (PlayBackend.signIn(a)) {
+                                                signingIn = false
+                                                withTimeoutOrNull(15_000) { PlayBackend.pullCloud(a, store) }
+                                            }
+                                        }
                                         finally { signingIn = false }
                                     }
                                 }, enabled = !signingIn) { Text(if (signingIn) "Connexion…" else "Se connecter") }
                             } else {
                                 OutlinedButton(onClick = { activity?.let { PlayBackend.showLeaderboards(it) } }) { Text("Classements") }
                                 OutlinedButton(onClick = { activity?.let { PlayBackend.showAchievements(it) } }) { Text("Succès") }
-                                TextButton(onClick = { PlayBackend.signOut() }) { Text("Quitter") }
+
                             }
                         }
                         PlayBackend.lastError?.let { Text(it, fontSize = 11.sp) }
@@ -138,15 +172,23 @@ private fun pool(mode: Int): List<Question> = (questions + extraQuestions + more
                     Text("Piano, histoire, paroles officielles et quiz →")
                 }
             }
-            modes.take(5).forEachIndexed { i, title ->
-                Card(onClick = { start(i) }, colors = CardDefaults.cardColors(containerColor = if (i == 0) Blue else Color(0xFF203653))) {
+            Text("Choisissez votre aventure", fontFamily = FontFamily.Serif, fontSize = 25.sp, color = Color.White)
+            modes.forEachIndexed { i, title ->
+                if (i == 5) return@forEachIndexed
+                Card(onClick = { start(i) }, shape = RoundedCornerShape(20.dp), modifier = Modifier.fillMaxWidth().border(1.dp, Gold.copy(alpha = .12f), RoundedCornerShape(20.dp)), colors = CardDefaults.cardColors(containerColor = if (i == 0) Blue else Color(0xFF203653))) {
                     Column(Modifier.fillMaxWidth().padding(20.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                        Text("${listOf("🎲", "🇫🇷", "🧭", "🏛", "🤝")[i]}  $title   →", fontSize = 21.sp, fontWeight = FontWeight.Bold)
+                        Text("${listOf("🎲", "🇫🇷", "🧭", "🏛", "🤝", "♫", "✍️", "📚", "🗺️", "🥐", "🏛️")[i]}  $title   →", fontSize = 21.sp, fontWeight = FontWeight.Bold)
                         Text(if (i == 0) "Grande aventure • 15 réponses minimum" else "Quiz dédié • ${pool(i).size} questions disponibles")
                         val best = prefs.getInt("best$i", -1)
                         if (best >= 0) Text("Votre record : $best %", color = Gold)
                         Crowns(progress.crowns[i])
                     }
+                }
+            }
+            Card(onClick = { start(-7) }, modifier = Modifier.fillMaxWidth()) {
+                Column(Modifier.padding(20.dp)) {
+                    Text("📷  La France en images", fontSize = 21.sp, fontWeight = FontWeight.Bold)
+                    Text("Quiz photo • lieux et spécialités →")
                 }
             }
             Card(onClick = { openHub(0) }, modifier = Modifier.fillMaxWidth()) {
@@ -197,7 +239,7 @@ private enum class Phase { READY, ROLLING, QUESTION, FEEDBACK, MOVING, END }
     var rewards by remember { mutableStateOf<List<GameEvent>>(emptyList()) }
     var levelUp by remember { mutableStateOf<Int?>(null) }
     var outOfHearts by remember { mutableStateOf(false) }
-    val activity = context as? android.app.Activity
+    val activity = androidx.activity.compose.LocalActivity.current
     val store = LocalProgress.current
     val progress = store.progress
     val motion = remember { Animatable(0f) }
@@ -262,6 +304,7 @@ private enum class Phase { READY, ROLLING, QUESTION, FEEDBACK, MOVING, END }
                 TextButton(onClick = { piano.enable(!piano.enabled) }) { Text(if (piano.enabled) "Son : oui" else "Son : non") }
             }
             Text(chapters[viewed], fontWeight = FontWeight.Black, fontSize = 26.sp)
+            QuestMap(viewed, motion.value, phase == Phase.MOVING) { stepInfo = it }
             Text("Case $position / 60   •   $answered réponses   •   $rate %   •   ⭐ $runXp XP", color = Mint)
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                 HeartsIndicator()
@@ -273,7 +316,6 @@ private enum class Phase { READY, ROLLING, QUESTION, FEEDBACK, MOVING, END }
                     FilterChip(selected = viewed == i, onClick = { viewed = i }, enabled = i <= unlocked, label = { Text("${if (i <= unlocked) "🗺" else "🔒"} ${i + 1}") })
                 }
             }
-            QuestMap(viewed, motion.value, phase == Phase.MOVING) { stepInfo = it }
             Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(20.dp)) {
                 Column { Text("Objectif : 80 %", color = Gold, fontWeight = FontWeight.Bold); Text("$minimum réponses minimum\nBonne réponse : +10 XP et +$die cases\nErreur : −1 cœur ❤️ et −2 cases", fontSize = 13.sp) }
             }
@@ -314,6 +356,7 @@ private enum class Phase { READY, ROLLING, QUESTION, FEEDBACK, MOVING, END }
                 }, modifier = Modifier.fillMaxWidth()) { Text(answer, modifier = Modifier.padding(vertical = 5.dp)) }
             } else {
                 Text("À retenir : ${q.answers[q.good]}", color = Mint, fontWeight = FontWeight.Bold)
+                (cultureBank + civicBank).firstOrNull { it.text == q.text }?.let { Text(it.detail) }
                 Text(if (chosen == q.good) "+$pendingXp XP${if (bonus) " • case bonus : +2 cases et +${Rules.BONUS_CASE_XP} XP !" else " • votre compagnon est prêt à repartir."}${if (pendingMultiplier > 1) " • combo ×$pendingMultiplier" else ""}" else "−1 cœur ❤️ : il vous en reste ${progress.hearts} sur ${Rules.MAX_HEARTS}. Petite marche arrière de 2 cases.")
             }
         } }, confirmButton = {
@@ -349,9 +392,10 @@ private fun point(n: Float): Offset {
 
 @Composable private fun QuestMap(chapter: Int, progress: Float, moving: Boolean, tap: (Int) -> Unit) {
     val local = (progress - chapter * 20).coerceIn(0f, 20f)
+    val mapHeight = (LocalConfiguration.current.screenHeightDp.dp * .36f).coerceIn(160.dp, 260.dp)
     val palette = listOf(Color(0xFFB8E0CB), Color(0xFFE5D6B3), Color(0xFFC2D7ED))
     Card(shape = RoundedCornerShape(26.dp)) {
-        BoxWithConstraints(Modifier.fillMaxWidth().aspectRatio(.92f).background(Color(0xFF85BCCD))) {
+        BoxWithConstraints(Modifier.fillMaxWidth().height(mapHeight).background(Color(0xFF85BCCD))) {
             Canvas(Modifier.fillMaxSize()) {
                 val land = Path().apply {
                     moveTo(size.width * .12f, size.height * .21f)
@@ -397,10 +441,11 @@ private fun point(n: Float): Offset {
                 Canvas(Modifier.offset(maxWidth * p.x - 16.dp, maxHeight * p.y - 4.dp).size(32.dp, 8.dp)) {
                     drawOval(Navy.copy(alpha = .22f - bounce * .009f))
                 }
-                Canvas(Modifier.offset(maxWidth * p.x - 16.dp, maxHeight * p.y - 42.dp - bounce.dp).size(32.dp, 44.dp).graphicsLayer {
+                Canvas(Modifier.offset((maxWidth * p.x - 22.dp).coerceIn(4.dp, maxWidth - 48.dp), (maxHeight * p.y - 54.dp - bounce.dp).coerceIn(4.dp, maxHeight - 60.dp)).size(44.dp, 56.dp).graphicsLayer {
                     rotationZ = if (moving) sin(local * PI * 2).toFloat() * 7f else 0f
                     scaleY = if (moving) 1f + sin(local * PI).toFloat().let { abs(it) } * .06f else 1f
                 }.semantics { contentDescription = "Personnage sur la case ${progress.toInt()}" }) {
+                    drawRoundRect(Color.White.copy(alpha = .9f), cornerRadius = androidx.compose.ui.geometry.CornerRadius(14.dp.toPx()), style = androidx.compose.ui.graphics.drawscope.Fill)
                     val gait = if (moving) sin(local * PI * 2).toFloat() * 6.dp.toPx() else 0f
                     drawLine(Navy, Offset(size.width * .42f, size.height * .66f), Offset(size.width * .3f + gait, size.height * .92f), 5.dp.toPx(), StrokeCap.Round)
                     drawLine(Navy, Offset(size.width * .58f, size.height * .66f), Offset(size.width * .7f - gait, size.height * .92f), 5.dp.toPx(), StrokeCap.Round)
