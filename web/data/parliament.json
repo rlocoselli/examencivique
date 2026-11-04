@@ -1,0 +1,107 @@
+{
+  "updated": "2026-11-04 18:17 UTC",
+  "assembly": {
+    "seats": 577,
+    "filled": 574,
+    "vacant": 3,
+    "groups": [
+      {
+        "name": "Rassemblement National",
+        "seats": 121
+      },
+      {
+        "name": "Ensemble pour la République",
+        "seats": 90
+      },
+      {
+        "name": "La France insoumise - Nouveau Front Populaire",
+        "seats": 70
+      },
+      {
+        "name": "Socialistes et apparentés",
+        "seats": 68
+      },
+      {
+        "name": "Droite Républicaine",
+        "seats": 46
+      },
+      {
+        "name": "Écologiste et Social",
+        "seats": 38
+      },
+      {
+        "name": "Les Démocrates",
+        "seats": 37
+      },
+      {
+        "name": "Horizons & Indépendants",
+        "seats": 35
+      },
+      {
+        "name": "Libertés, Indépendants, Outre-mer et Territoires",
+        "seats": 24
+      },
+      {
+        "name": "Gauche Démocrate et Républicaine",
+        "seats": 17
+      },
+      {
+        "name": "Union des droites pour la République",
+        "seats": 17
+      },
+      {
+        "name": "Non inscrit",
+        "seats": 11
+      }
+    ],
+    "source": "https://www2.assemblee-nationale.fr/instances/liste/groupes_politiques/effectif"
+  },
+  "senate": {
+    "seats": 348,
+    "filled": 348,
+    "vacant": 0,
+    "groups": [
+      {
+        "name": "Les Républicains",
+        "seats": 124
+      },
+      {
+        "name": "Union Centriste et\nIndépendants",
+        "seats": 63
+      },
+      {
+        "name": "Socialiste, Écologiste et\nRépublicain",
+        "seats": 62
+      },
+      {
+        "name": "Communiste Républicain Citoyen et\nÉcologiste - Kanaky",
+        "seats": 18
+      },
+      {
+        "name": "du Rassemblement Démocratique et\nSocial Européen",
+        "seats": 18
+      },
+      {
+        "name": "Rassemblement des démocrates,\nprogressistes et indépendants",
+        "seats": 16
+      },
+      {
+        "name": "Écologiste - Solidarité et\nTerritoires",
+        "seats": 15
+      },
+      {
+        "name": "Les Indépendants - République et\nTerritoires",
+        "seats": 14
+      },
+      {
+        "name": "Union Nationale pour les\nTerritoires",
+        "seats": 15
+      },
+      {
+        "name": "Réunion administrative des Sénateurs ne\nfigurant sur la liste d'aucun groupe",
+        "seats": 3
+      }
+    ],
+    "source": "https://www.senat.fr/senateurs/grp.html"
+  }
+}

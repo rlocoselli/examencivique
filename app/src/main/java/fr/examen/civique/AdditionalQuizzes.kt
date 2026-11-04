@@ -88,9 +88,20 @@ private val photoBank = listOf(
     CultureQuestion("Photo", "Quelle technique donne ses couches à cette viennoiserie ?", listOf("Le tourage de la pâte avec du beurre", "La cuisson à l’eau", "La fermentation du fromage", "Le pochage"), "Le tourage alterne des couches de pâte et de beurre pour produire le feuilletage.", "croissant")
 )
 @Composable fun AdditionalQuiz(route: String, exit: () -> Unit) {
-    val exam = route == "civic-test"
-    val civic = route.startsWith("civic")
-    val source = if (civic) civicBank else if (route == "photos") photoBank else cultureBank.filter { it.category == route }
+    val exam = route.endsWith("-test")
+    val civic = route.startsWith("civic") || route.startsWith("resident") || route.startsWith("naturalisation")
+    val civicSource = when {
+        route.startsWith("resident") -> RESIDENT_SOURCE
+        route.startsWith("naturalisation") -> NATURALISATION_SOURCE
+        else -> CIVIC_SOURCE
+    }
+    val source = when {
+        route.startsWith("resident") -> residentBank
+        route.startsWith("naturalisation") -> naturalisationBank
+        route.startsWith("civic") -> civicBank
+        route == "photos" -> photoBank
+        else -> cultureBank.filter { it.category == route }
+    }
     val seed = rememberSaveable { Random.nextInt() }
     val deck = remember(route, seed) { source.shuffled(Random(seed)).take(if (exam) 40 else 20) }
     var index by rememberSaveable { mutableIntStateOf(0) }
@@ -115,7 +126,7 @@ private val photoBank = listOf(
         if (done) "Chaque découverte compte." else "${index + 1} / ${deck.size}  ·  ${if (exam) "%02d:%02d".format(remaining / 60, remaining % 60) else "À votre rythme"}", exit, index) {
         if (done) {
             Text("$correct / ${deck.size}", fontSize = 54.sp, fontFamily = FontFamily.Default, color = Brass)
-            Text(if (exam) { if (correct >= 32) "Objectif de connaissances atteint" else "Poursuivez vos révisions" } else "${correct * 100 / deck.size}% de bonnes réponses", fontSize = 22.sp, fontFamily = FontFamily.Default)
+            Text(if (exam) { if (correct * 5 >= deck.size * 4) "Objectif de connaissances atteint" else "Poursuivez vos révisions" } else "${correct * 100 / deck.size}% de bonnes réponses", fontSize = 22.sp, fontFamily = FontFamily.Default)
             Text(if (exam && index < deck.size) "Temps écoulé. Les questions sans réponse comptent comme incorrectes." else "Une nouvelle session vous proposera un ordre différent.")
             if (mistakes.isNotEmpty()) {
                 Text("À revoir", fontFamily = FontFamily.Default, fontSize = 24.sp)
@@ -152,7 +163,7 @@ private val photoBank = listOf(
                 }
                 Button(onClick = { index++; selected = -1 }, colors = ButtonDefaults.buttonColors(containerColor = Brass, contentColor = Cream), modifier = Modifier.fillMaxWidth().height(52.dp)) { Text(if (index == deck.lastIndex) "Voir mon bilan →" else "Question suivante →") }
             }
-            if (civic) TextButton(onClick = { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(CIVIC_SOURCE))) }) { Text("Source : ministère de l’Intérieur ↗", fontSize = 12.sp) }
+            if (civic) TextButton(onClick = { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(civicSource))) }) { Text("Source : ministère de l’Intérieur ↗", fontSize = 12.sp) }
         }
     }
 }

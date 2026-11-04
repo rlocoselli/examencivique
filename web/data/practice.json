@@ -1,0 +1,2213 @@
+[
+  {
+    "category": "Civique CSP",
+    "prompt": "De quand date la Constitution de la Ve République ?",
+    "answers": [
+      "1958",
+      "1789",
+      "1905",
+      "1946"
+    ],
+    "detail": "Réponse pédagogique : 1958. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Le régime de la France est :",
+    "answers": [
+      "Une république démocratique",
+      "Une monarchie absolue",
+      "Une dictature",
+      "Un empire"
+    ],
+    "detail": "Réponse pédagogique : Une république démocratique. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel animal est un symbole de la France ?",
+    "answers": [
+      "Le coq",
+      "Le lion",
+      "L’aigle",
+      "Le loup"
+    ],
+    "detail": "Réponse pédagogique : Le coq. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel est le nom de l'hymne national ?",
+    "answers": [
+      "La Marseillaise",
+      "Le Chant des partisans",
+      "L’Ode à la joie",
+      "La Parisienne"
+    ],
+    "detail": "Réponse pédagogique : La Marseillaise. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel symbole de la République française est tricolore ?",
+    "answers": [
+      "Le drapeau",
+      "Marianne",
+      "La devise",
+      "L’hymne"
+    ],
+    "detail": "Réponse pédagogique : Le drapeau. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quelle est la date de la fête nationale française ?",
+    "answers": [
+      "Le 14 juillet",
+      "Le 11 novembre",
+      "Le 8 mai",
+      "Le 1er janvier"
+    ],
+    "detail": "Réponse pédagogique : Le 14 juillet. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quelle est la devise de la République française ?",
+    "answers": [
+      "Liberté, Égalité, Fraternité",
+      "Travail, Famille, Patrie",
+      "Paix, Justice, Unité",
+      "Force, Honneur, Nation"
+    ],
+    "detail": "Réponse pédagogique : Liberté, Égalité, Fraternité. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quelle est la langue officielle de la République française ?",
+    "answers": [
+      "Le français",
+      "L’anglais",
+      "Le latin",
+      "Aucune langue"
+    ],
+    "detail": "Réponse pédagogique : Le français. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quelle liberté permet à chacun d’exprimer ses idées ?",
+    "answers": [
+      "La liberté d’expression",
+      "La liberté de circulation",
+      "La liberté d’association",
+      "Le droit de propriété"
+    ],
+    "detail": "Réponse pédagogique : La liberté d’expression. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quelles sont les couleurs du drapeau français ?",
+    "answers": [
+      "Bleu, blanc, rouge",
+      "Vert, blanc, rouge",
+      "Noir, rouge, or",
+      "Bleu, jaune, rouge"
+    ],
+    "detail": "Réponse pédagogique : Bleu, blanc, rouge. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qu'est-ce que la Marseillaise ?",
+    "answers": [
+      "L’hymne national français",
+      "La devise française",
+      "Une loi",
+      "Une institution"
+    ],
+    "detail": "Réponse pédagogique : L’hymne national français. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui est Marianne ?",
+    "answers": [
+      "Une représentation de la République",
+      "Une reine de France",
+      "Une présidente",
+      "Une déesse de l’Antiquité"
+    ],
+    "detail": "Réponse pédagogique : Une représentation de la République. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Une personne peut-elle changer librement de religion ?",
+    "answers": [
+      "Oui, la liberté de conscience le permet",
+      "Non, jamais",
+      "Seulement avec l’accord du maire",
+      "Uniquement à 21 ans"
+    ],
+    "detail": "Réponse pédagogique : Oui, la liberté de conscience le permet. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "En quelle année la loi de séparation des Églises et de l'État a-t-elle été votée ?",
+    "answers": [
+      "1905",
+      "1789",
+      "1848",
+      "1958"
+    ],
+    "detail": "Réponse pédagogique : 1905. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel droit est garanti par la laïcité ?",
+    "answers": [
+      "La liberté de conscience",
+      "Le droit de conduire",
+      "Le droit à un logement gratuit",
+      "Le droit de ne pas respecter la loi"
+    ],
+    "detail": "Réponse pédagogique : La liberté de conscience. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Un enfant peut-il refuser d’aller à l’école pour une raison religieuse ?",
+    "answers": [
+      "Non, l’instruction reste obligatoire",
+      "Oui, toujours",
+      "Oui, après 10 ans",
+      "Seulement le lundi"
+    ],
+    "detail": "Réponse pédagogique : Non, l’instruction reste obligatoire. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Une personne a-t-elle le droit de ne pas croire en une religion ?",
+    "answers": [
+      "Oui, c’est la liberté de conscience",
+      "Non",
+      "Seulement à partir de 30 ans",
+      "Seulement avec une autorisation"
+    ],
+    "detail": "Réponse pédagogique : Oui, c’est la liberté de conscience. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui nomme le Premier ministre ?",
+    "answers": [
+      "Le président de la République",
+      "Le maire de Paris",
+      "Le Sénat seul",
+      "Le préfet"
+    ],
+    "detail": "Réponse pédagogique : Le président de la République. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Le Parlement est composé :",
+    "answers": [
+      "De l’Assemblée nationale et du Sénat",
+      "Du Gouvernement et des mairies",
+      "De la police et de la justice",
+      "Du président et des préfets"
+    ],
+    "detail": "Réponse pédagogique : De l’Assemblée nationale et du Sénat. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "A-t-on le droit de ne pas respecter une loi ?",
+    "answers": [
+      "Non, chacun doit respecter la loi",
+      "Oui, si elle déplaît",
+      "Oui, en vacances",
+      "Oui, sur internet"
+    ],
+    "detail": "Réponse pédagogique : Non, chacun doit respecter la loi. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui doit respecter la loi ?",
+    "answers": [
+      "Toute personne",
+      "Seulement les étrangers",
+      "Seulement les élus",
+      "Seulement les salariés"
+    ],
+    "detail": "Réponse pédagogique : Toute personne. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel pouvoir détient un juge ? Le pouvoir :",
+    "answers": [
+      "Judiciaire",
+      "Exécutif",
+      "Législatif",
+      "Municipal"
+    ],
+    "detail": "Réponse pédagogique : Judiciaire. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "L'autorité judiciaire est exercée par :",
+    "answers": [
+      "Les juges et magistrats",
+      "Les députés",
+      "Les maires",
+      "Les ministres"
+    ],
+    "detail": "Réponse pédagogique : Les juges et magistrats. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui est élu lors des élections législatives ?",
+    "answers": [
+      "Les députés",
+      "Les sénateurs",
+      "Le président",
+      "Les préfets"
+    ],
+    "detail": "Réponse pédagogique : Les députés. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Combien de députés composent l’Assemblée nationale ?",
+    "answers": [
+      "577",
+      "348",
+      "101",
+      "27"
+    ],
+    "detail": "Réponse pédagogique : 577. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui est élu lors des élections municipales ?",
+    "answers": [
+      "Les conseillers municipaux",
+      "Les députés",
+      "Les préfets",
+      "Les sénateurs"
+    ],
+    "detail": "Réponse pédagogique : Les conseillers municipaux. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui est élu lors des élections présidentielles ?",
+    "answers": [
+      "Le président de la République",
+      "Le Premier ministre",
+      "Le président du Sénat",
+      "Les maires"
+    ],
+    "detail": "Réponse pédagogique : Le président de la République. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "À partir de quel âge a-t-on le droit de voter ?",
+    "answers": [
+      "18 ans",
+      "16 ans",
+      "21 ans",
+      "25 ans"
+    ],
+    "detail": "Réponse pédagogique : 18 ans. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Pour combien de temps est élu le président de la République française ?",
+    "answers": [
+      "5 ans",
+      "4 ans",
+      "6 ans",
+      "7 ans"
+    ],
+    "detail": "Réponse pédagogique : 5 ans. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Pour combien de temps sont élus les députés ?",
+    "answers": [
+      "5 ans, sauf dissolution",
+      "3 ans",
+      "6 ans",
+      "9 ans"
+    ],
+    "detail": "Réponse pédagogique : 5 ans, sauf dissolution. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Pour combien de temps sont élus les sénateurs ?",
+    "answers": [
+      "6 ans",
+      "4 ans",
+      "5 ans",
+      "7 ans"
+    ],
+    "detail": "Réponse pédagogique : 6 ans. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui possède le pouvoir exécutif ?",
+    "answers": [
+      "Le président de la République et le Gouvernement",
+      "Le Parlement seul",
+      "Les tribunaux",
+      "Le Conseil constitutionnel seul"
+    ],
+    "detail": "Réponse pédagogique : Le président de la République et le Gouvernement. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel est le rôle des députés ?",
+    "answers": [
+      "Voter les lois et contrôler le Gouvernement",
+      "Juger les crimes",
+      "Nommer tous les maires",
+      "Délivrer les passeports"
+    ],
+    "detail": "Réponse pédagogique : Voter les lois et contrôler le Gouvernement. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "La séparation des pouvoirs est un principe fondamental. Quels sont les trois pouvoirs concernés ?",
+    "answers": [
+      "Exécutif, législatif et judiciaire",
+      "Militaire, religieux et commercial",
+      "Municipal, régional et sportif",
+      "Privé, public et familial"
+    ],
+    "detail": "Réponse pédagogique : Exécutif, législatif et judiciaire. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui possède le pouvoir législatif ?",
+    "answers": [
+      "Le Parlement",
+      "Le Gouvernement seul",
+      "La police",
+      "Les préfets"
+    ],
+    "detail": "Réponse pédagogique : Le Parlement. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui élit les députés ?",
+    "answers": [
+      "Les électeurs au suffrage universel direct",
+      "Les sénateurs seuls",
+      "Les maires seuls",
+      "Les juges"
+    ],
+    "detail": "Réponse pédagogique : Les électeurs au suffrage universel direct. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui vote les lois ?",
+    "answers": [
+      "Le Parlement",
+      "La police",
+      "Les préfectures",
+      "Les banques"
+    ],
+    "detail": "Réponse pédagogique : Le Parlement. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui réside au palais de l'Élysée ?",
+    "answers": [
+      "Le président de la République",
+      "Le Premier ministre",
+      "Le maire de Paris",
+      "Le président du Sénat"
+    ],
+    "detail": "Réponse pédagogique : Le président de la République. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Combien y a-t-il de départements en France ?",
+    "answers": [
+      "101",
+      "96",
+      "13",
+      "18"
+    ],
+    "detail": "Réponse pédagogique : 101. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui représente l'État dans un département ?",
+    "answers": [
+      "Le préfet",
+      "Le maire",
+      "Le député",
+      "Le président du conseil départemental"
+    ],
+    "detail": "Réponse pédagogique : Le préfet. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui dirige la commune ?",
+    "answers": [
+      "Le maire",
+      "Le préfet",
+      "Le président de la République",
+      "Le sénateur"
+    ],
+    "detail": "Réponse pédagogique : Le maire. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Est-ce que le président de la République a tous les pouvoirs ?",
+    "answers": [
+      "Non, les pouvoirs sont séparés",
+      "Oui, sans limite",
+      "Oui, à vie",
+      "Oui, hors de Paris"
+    ],
+    "detail": "Réponse pédagogique : Non, les pouvoirs sont séparés. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel est le rôle du Parlement ?",
+    "answers": [
+      "Voter les lois et contrôler l’action du Gouvernement",
+      "Diriger la police locale",
+      "Organiser les soins",
+      "Délivrer les actes de naissance"
+    ],
+    "detail": "Réponse pédagogique : Voter les lois et contrôler l’action du Gouvernement. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Combien d'États font partie de l'Union européenne au 1er janvier 2025 ?",
+    "answers": [
+      "27",
+      "6",
+      "28",
+      "32"
+    ],
+    "detail": "Réponse pédagogique : 27. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel État n'est pas membre de l'Union européenne ?",
+    "answers": [
+      "La Suisse",
+      "La France",
+      "L’Allemagne",
+      "L’Italie"
+    ],
+    "detail": "Réponse pédagogique : La Suisse. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "À quelle fréquence les élections européennes sont-elles organisées ?",
+    "answers": [
+      "Tous les 5 ans",
+      "Tous les ans",
+      "Tous les 3 ans",
+      "Tous les 7 ans"
+    ],
+    "detail": "Réponse pédagogique : Tous les 5 ans. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel pays est un pays fondateur de l'Union européenne ?",
+    "answers": [
+      "La France",
+      "Le Portugal",
+      "La Pologne",
+      "La Suède"
+    ],
+    "detail": "Réponse pédagogique : La France. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quelle est la monnaie utilisée en France ?",
+    "answers": [
+      "L’euro",
+      "Le franc",
+      "La livre",
+      "Le dollar"
+    ],
+    "detail": "Réponse pédagogique : L’euro. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui élit les députés européens ?",
+    "answers": [
+      "Les citoyens de l’Union européenne lors des élections européennes",
+      "Les préfets",
+      "Les juges",
+      "Les ministres seuls"
+    ],
+    "detail": "Réponse pédagogique : Les citoyens de l’Union européenne lors des élections européennes. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quand célèbre-t-on la journée de l'Europe ?",
+    "answers": [
+      "Le 9 mai",
+      "Le 14 juillet",
+      "Le 11 novembre",
+      "Le 25 décembre"
+    ],
+    "detail": "Réponse pédagogique : Le 9 mai. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Comment s’appelle la Constitution actuelle de la France ?",
+    "answers": [
+      "La Constitution de la Ve République",
+      "La Charte royale",
+      "Le Code civil",
+      "Le traité de Rome"
+    ],
+    "detail": "Réponse pédagogique : La Constitution de la Ve République. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "De quelle année date la Déclaration des droits de l’homme et du citoyen ?",
+    "answers": [
+      "1789",
+      "1804",
+      "1848",
+      "1958"
+    ],
+    "detail": "Réponse pédagogique : 1789. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel texte a été adopté pendant la Révolution française ?",
+    "answers": [
+      "La Déclaration des droits de l’homme et du citoyen",
+      "Le traité de Maastricht",
+      "La loi de 1905",
+      "La Constitution de 1958"
+    ],
+    "detail": "Réponse pédagogique : La Déclaration des droits de l’homme et du citoyen. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quelle liberté permet à une personne de ne pas avoir de religion ?",
+    "answers": [
+      "La liberté de conscience",
+      "La liberté du commerce",
+      "Le droit de vote",
+      "La liberté de circulation"
+    ],
+    "detail": "Réponse pédagogique : La liberté de conscience. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "La peine de mort est :",
+    "answers": [
+      "Abolie en France",
+      "Obligatoire pour un vol",
+      "Toujours autorisée",
+      "Décidée par le maire"
+    ],
+    "detail": "Réponse pédagogique : Abolie en France. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "En France, est-ce légal d'être marié à plusieurs personnes en même temps ?",
+    "answers": [
+      "Non, la polygamie est interdite",
+      "Oui, sans limite",
+      "Oui, après 40 ans",
+      "Oui, si le maire accepte"
+    ],
+    "detail": "Réponse pédagogique : Non, la polygamie est interdite. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Faut-il réduire ses déchets ?",
+    "answers": [
+      "Oui, pour préserver l’environnement",
+      "Non, jamais",
+      "Seulement en vacances",
+      "Seulement dans les grandes villes"
+    ],
+    "detail": "Réponse pédagogique : Oui, pour préserver l’environnement. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Jeter une bouteille dans la rue est :",
+    "answers": [
+      "Interdit et sanctionnable",
+      "Toujours autorisé",
+      "Obligatoire",
+      "Autorisé la nuit"
+    ],
+    "detail": "Réponse pédagogique : Interdit et sanctionnable. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qu'est-ce qu'une infraction ?",
+    "answers": [
+      "Un acte interdit par la loi et passible d’une sanction",
+      "Un vote",
+      "Une démarche administrative",
+      "Une association"
+    ],
+    "detail": "Réponse pédagogique : Un acte interdit par la loi et passible d’une sanction. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quelle est l'infraction la plus grave ?",
+    "answers": [
+      "Le crime",
+      "Le délit",
+      "La contravention",
+      "Une erreur de frappe"
+    ],
+    "detail": "Réponse pédagogique : Le crime. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "En quelle année a débuté la Révolution française ?",
+    "answers": [
+      "1789",
+      "1515",
+      "1815",
+      "1914"
+    ],
+    "detail": "Réponse pédagogique : 1789. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui était Napoléon Ier ?",
+    "answers": [
+      "Un empereur des Français",
+      "Un roi médiéval",
+      "Un président de la Ve République",
+      "Un écrivain"
+    ],
+    "detail": "Réponse pédagogique : Un empereur des Français. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Dans quelle République est-on aujourd'hui ?",
+    "answers": [
+      "La Ve République",
+      "La IIe République",
+      "La IIIe République",
+      "La IVe République"
+    ],
+    "detail": "Réponse pédagogique : La Ve République. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qu'est-ce que la Shoah ?",
+    "answers": [
+      "Le génocide des Juifs par les nazis",
+      "Une révolution française",
+      "Un traité européen",
+      "Une fête nationale"
+    ],
+    "detail": "Réponse pédagogique : Le génocide des Juifs par les nazis. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui a rendu l’école gratuite, laïque et obligatoire ?",
+    "answers": [
+      "Jules Ferry",
+      "Napoléon Ier",
+      "Louis XIV",
+      "Jean Monnet"
+    ],
+    "detail": "Réponse pédagogique : Jules Ferry. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quand a eu lieu la Seconde Guerre mondiale ?",
+    "answers": [
+      "1939–1945",
+      "1914–1918",
+      "1870–1871",
+      "1789–1799"
+    ],
+    "detail": "Réponse pédagogique : 1939–1945. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quand a eu lieu la Première Guerre mondiale ?",
+    "answers": [
+      "1914–1918",
+      "1939–1945",
+      "1804–1815",
+      "1954–1962"
+    ],
+    "detail": "Réponse pédagogique : 1914–1918. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "En quelle année a été créée la Communauté Économique Européenne (CEE) ?",
+    "answers": [
+      "1957",
+      "1945",
+      "1989",
+      "2002"
+    ],
+    "detail": "Réponse pédagogique : 1957. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Le 11 novembre est un jour férié. À quoi correspond cette date ?",
+    "answers": [
+      "L’armistice du 11 novembre 1918",
+      "La prise de la Bastille",
+      "La fin de la Seconde Guerre mondiale en Europe",
+      "La création de l’euro"
+    ],
+    "detail": "Réponse pédagogique : L’armistice du 11 novembre 1918. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui a été le premier Président élu sous la Ve République ?",
+    "answers": [
+      "Charles de Gaulle",
+      "François Mitterrand",
+      "Georges Pompidou",
+      "Valéry Giscard d’Estaing"
+    ],
+    "detail": "Réponse pédagogique : Charles de Gaulle. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "En quelle année l'esclavage a-t-il été aboli définitivement en France ?",
+    "answers": [
+      "1848",
+      "1789",
+      "1905",
+      "1945"
+    ],
+    "detail": "Réponse pédagogique : 1848. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Depuis quelle année l'école publique est-elle gratuite ?",
+    "answers": [
+      "1881",
+      "1789",
+      "1905",
+      "1958"
+    ],
+    "detail": "Réponse pédagogique : 1881. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Combien y a-t-il eu de républiques en France ?",
+    "answers": [
+      "Cinq",
+      "Trois",
+      "Quatre",
+      "Six"
+    ],
+    "detail": "Réponse pédagogique : Cinq. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui était le roi de France au moment de la Révolution française ?",
+    "answers": [
+      "Louis XVI",
+      "Louis XIV",
+      "François Ier",
+      "Henri IV"
+    ],
+    "detail": "Réponse pédagogique : Louis XVI. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui a fondé la Ve République ?",
+    "answers": [
+      "Charles de Gaulle",
+      "Jules Ferry",
+      "Napoléon Ier",
+      "Louis XVI"
+    ],
+    "detail": "Réponse pédagogique : Charles de Gaulle. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quelle guerre a eu lieu entre 1914 et 1918 ?",
+    "answers": [
+      "La Première Guerre mondiale",
+      "La Seconde Guerre mondiale",
+      "La guerre de Cent Ans",
+      "La guerre franco-prussienne"
+    ],
+    "detail": "Réponse pédagogique : La Première Guerre mondiale. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Pourquoi l’année 1958 est importante pour la France ?",
+    "answers": [
+      "L’adoption de la Constitution de la Ve République",
+      "La prise de la Bastille",
+      "La création de l’euro",
+      "L’abolition de l’esclavage"
+    ],
+    "detail": "Réponse pédagogique : L’adoption de la Constitution de la Ve République. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel fleuve coule en France ?",
+    "answers": [
+      "La Loire",
+      "Le Nil",
+      "Le Danube",
+      "Le Tage"
+    ],
+    "detail": "Réponse pédagogique : La Loire. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quelle ville est française ?",
+    "answers": [
+      "Lyon",
+      "Madrid",
+      "Rome",
+      "Berlin"
+    ],
+    "detail": "Réponse pédagogique : Lyon. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel océan borde la côte ouest française ?",
+    "answers": [
+      "L’océan Atlantique",
+      "L’océan Pacifique",
+      "L’océan Indien",
+      "L’océan Arctique"
+    ],
+    "detail": "Réponse pédagogique : L’océan Atlantique. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qu'est-ce que Paris ?",
+    "answers": [
+      "La capitale de la France",
+      "Une région d’Italie",
+      "Un département d’outre-mer",
+      "Une île"
+    ],
+    "detail": "Réponse pédagogique : La capitale de la France. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quelle est la capitale de la France ?",
+    "answers": [
+      "Paris",
+      "Lyon",
+      "Marseille",
+      "Lille"
+    ],
+    "detail": "Réponse pédagogique : Paris. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Sur quel continent se situe la France métropolitaine ?",
+    "answers": [
+      "L’Europe",
+      "L’Afrique",
+      "L’Asie",
+      "L’Amérique"
+    ],
+    "detail": "Réponse pédagogique : L’Europe. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quelle île est un département d'outre-mer français ?",
+    "answers": [
+      "La Réunion",
+      "La Sicile",
+      "La Sardaigne",
+      "Majorque"
+    ],
+    "detail": "Réponse pédagogique : La Réunion. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Combien y a-t-il de régions en France métropolitaine ?",
+    "answers": [
+      "13",
+      "18",
+      "22",
+      "101"
+    ],
+    "detail": "Réponse pédagogique : 13. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quelle ville est un grand port maritime ?",
+    "answers": [
+      "Marseille",
+      "Dijon",
+      "Clermont-Ferrand",
+      "Orléans"
+    ],
+    "detail": "Réponse pédagogique : Marseille. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quelle est la mer au sud de la France métropolitaine ?",
+    "answers": [
+      "La Méditerranée",
+      "La mer du Nord",
+      "La mer Baltique",
+      "La mer Noire"
+    ],
+    "detail": "Réponse pédagogique : La Méditerranée. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quelle ville est située au bord de la mer Méditerranée ?",
+    "answers": [
+      "Nice",
+      "Lille",
+      "Reims",
+      "Rennes"
+    ],
+    "detail": "Réponse pédagogique : Nice. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Où se situe la Corse ?",
+    "answers": [
+      "En mer Méditerranée",
+      "Dans l’Atlantique",
+      "Dans la Manche",
+      "Dans la mer du Nord"
+    ],
+    "detail": "Réponse pédagogique : En mer Méditerranée. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quelle chaîne de montagnes est située entre la France et l'Italie ?",
+    "answers": [
+      "Les Alpes",
+      "Les Pyrénées",
+      "Les Vosges",
+      "Le Massif central"
+    ],
+    "detail": "Réponse pédagogique : Les Alpes. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui était Molière ?",
+    "answers": [
+      "Un dramaturge et comédien",
+      "Un empereur",
+      "Un peintre",
+      "Un général"
+    ],
+    "detail": "Réponse pédagogique : Un dramaturge et comédien. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui était Charles Baudelaire ?",
+    "answers": [
+      "Un poète",
+      "Un roi",
+      "Un scientifique",
+      "Un navigateur"
+    ],
+    "detail": "Réponse pédagogique : Un poète. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui était George Sand ?",
+    "answers": [
+      "Une romancière",
+      "Une reine",
+      "Une aviatrice",
+      "Une sculptrice"
+    ],
+    "detail": "Réponse pédagogique : Une romancière. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui était Simone de Beauvoir ?",
+    "answers": [
+      "Une écrivaine et philosophe",
+      "Une reine",
+      "Une ministre de Louis XIV",
+      "Une peintre"
+    ],
+    "detail": "Réponse pédagogique : Une écrivaine et philosophe. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui était Albert Camus ?",
+    "answers": [
+      "Un écrivain et philosophe",
+      "Un roi",
+      "Un sculpteur",
+      "Un astronaute"
+    ],
+    "detail": "Réponse pédagogique : Un écrivain et philosophe. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui était Paul Cézanne ?",
+    "answers": [
+      "Un peintre",
+      "Un poète",
+      "Un général",
+      "Un compositeur"
+    ],
+    "detail": "Réponse pédagogique : Un peintre. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui était Marc Chagall ?",
+    "answers": [
+      "Un peintre",
+      "Un empereur",
+      "Un médecin",
+      "Un athlète"
+    ],
+    "detail": "Réponse pédagogique : Un peintre. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui était Joséphine Baker ?",
+    "answers": [
+      "Une artiste et résistante",
+      "Une reine",
+      "Une physicienne",
+      "Une exploratrice"
+    ],
+    "detail": "Réponse pédagogique : Une artiste et résistante. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui était une chanteuse française célèbre ?",
+    "answers": [
+      "Édith Piaf",
+      "George Sand",
+      "Marie Curie",
+      "Simone de Beauvoir"
+    ],
+    "detail": "Réponse pédagogique : Édith Piaf. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qu'est-ce que le Louvre ?",
+    "answers": [
+      "Un musée à Paris",
+      "Un parlement",
+      "Une université à Lyon",
+      "Un château en Bretagne"
+    ],
+    "detail": "Réponse pédagogique : Un musée à Paris. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui était Jean de la Fontaine ?",
+    "answers": [
+      "Un poète et auteur de fables",
+      "Un roi",
+      "Un peintre",
+      "Un militaire"
+    ],
+    "detail": "Réponse pédagogique : Un poète et auteur de fables. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel écrivain est français ?",
+    "answers": [
+      "Victor Hugo",
+      "William Shakespeare",
+      "Miguel de Cervantès",
+      "Dante Alighieri"
+    ],
+    "detail": "Réponse pédagogique : Victor Hugo. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Dans quelle ville se trouve la tour Eiffel ?",
+    "answers": [
+      "Paris",
+      "Lyon",
+      "Marseille",
+      "Bordeaux"
+    ],
+    "detail": "Réponse pédagogique : Paris. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quand célèbre-t-on Noël ?",
+    "answers": [
+      "Le 25 décembre",
+      "Le 14 juillet",
+      "Le 1er mai",
+      "Le 11 novembre"
+    ],
+    "detail": "Réponse pédagogique : Le 25 décembre. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel numéro d'urgence permet d'appeler le SAMU ?",
+    "answers": [
+      "15",
+      "18",
+      "17",
+      "114"
+    ],
+    "detail": "Réponse pédagogique : 15. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel numéro d'urgence permet d'appeler les pompiers ?",
+    "answers": [
+      "18",
+      "15",
+      "17",
+      "119"
+    ],
+    "detail": "Réponse pédagogique : 18. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Le travail non déclaré est :",
+    "answers": [
+      "Illégal",
+      "Toujours autorisé",
+      "Obligatoire",
+      "Autorisé sans limite"
+    ],
+    "detail": "Réponse pédagogique : Illégal. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qu'est-ce que le SMIC ?",
+    "answers": [
+      "Le salaire minimum interprofessionnel de croissance",
+      "Une assurance habitation",
+      "Un diplôme",
+      "Un impôt local"
+    ],
+    "detail": "Réponse pédagogique : Le salaire minimum interprofessionnel de croissance. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quelle est la durée légale du temps de travail par semaine ?",
+    "answers": [
+      "35 heures",
+      "20 heures",
+      "48 heures",
+      "60 heures"
+    ],
+    "detail": "Réponse pédagogique : 35 heures. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Qui est aidé par France Travail ?",
+    "answers": [
+      "Les personnes recherchant un emploi",
+      "Uniquement les retraités",
+      "Uniquement les touristes",
+      "Uniquement les élus"
+    ],
+    "detail": "Réponse pédagogique : Les personnes recherchant un emploi. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Une femme peut-elle créer son entreprise ?",
+    "answers": [
+      "Oui, au même titre qu’un homme",
+      "Non",
+      "Seulement avec l’accord de son mari",
+      "Seulement après 50 ans"
+    ],
+    "detail": "Réponse pédagogique : Oui, au même titre qu’un homme. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Auprès de quel organisme faut-il demander le remboursement des frais de santé ?",
+    "answers": [
+      "L’Assurance Maladie",
+      "La mairie",
+      "Le Sénat",
+      "France Travail"
+    ],
+    "detail": "Réponse pédagogique : L’Assurance Maladie. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "En cas de problème de santé non urgent, à qui faut-il s’adresser en premier ?",
+    "answers": [
+      "Au médecin traitant",
+      "Aux pompiers systématiquement",
+      "À la police",
+      "Au maire"
+    ],
+    "detail": "Réponse pédagogique : Au médecin traitant. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel est le rôle du médecin traitant ?",
+    "answers": [
+      "Assurer le suivi médical et coordonner les soins",
+      "Voter les lois",
+      "Délivrer les permis",
+      "Fixer les impôts"
+    ],
+    "detail": "Réponse pédagogique : Assurer le suivi médical et coordonner les soins. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel est l’objectif des vaccinations obligatoires ?",
+    "answers": [
+      "Protéger contre des maladies infectieuses",
+      "Remplacer toute consultation",
+      "Soigner toute maladie immédiatement",
+      "Remplacer une alimentation équilibrée"
+    ],
+    "detail": "Réponse pédagogique : Protéger contre des maladies infectieuses. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "À quoi sert la carte Vitale ?",
+    "answers": [
+      "À faciliter la prise en charge et le remboursement des soins",
+      "À voter",
+      "À conduire",
+      "À voyager sans passeport"
+    ],
+    "detail": "Réponse pédagogique : À faciliter la prise en charge et le remboursement des soins. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "À quoi sert une mutuelle santé ?",
+    "answers": [
+      "À compléter les remboursements de l’Assurance Maladie",
+      "À délivrer des permis",
+      "À inscrire sur les listes électorales",
+      "À payer les impôts"
+    ],
+    "detail": "Réponse pédagogique : À compléter les remboursements de l’Assurance Maladie. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Jusqu'à quel âge l'école est-elle obligatoire ?",
+    "answers": [
+      "16 ans pour l’instruction obligatoire",
+      "12 ans",
+      "14 ans",
+      "21 ans"
+    ],
+    "detail": "Réponse pédagogique : 16 ans pour l’instruction obligatoire. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Quel diplôme obtient-on à la fin du lycée ?",
+    "answers": [
+      "Le baccalauréat",
+      "Le brevet",
+      "Le doctorat",
+      "Le permis"
+    ],
+    "detail": "Réponse pédagogique : Le baccalauréat. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Dans quels établissements scolaires vont les élèves après l'école élémentaire ?",
+    "answers": [
+      "Les collèges",
+      "Les universités",
+      "Les lycées directement",
+      "Les crèches"
+    ],
+    "detail": "Réponse pédagogique : Les collèges. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Civique CSP",
+    "prompt": "Les enfants qui ne parlent pas français :",
+    "answers": [
+      "Sont scolarisés et peuvent bénéficier d’un accompagnement adapté",
+      "Ne peuvent pas aller à l’école",
+      "Doivent attendre d’être adultes",
+      "Sont dispensés d’instruction"
+    ],
+    "detail": "Réponse pédagogique : Sont scolarisés et peuvent bénéficier d’un accompagnement adapté. Consultez les fiches du ministère pour approfondir ce thème."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Quelle phrase est correctement accordée ?",
+    "answers": [
+      "Les fleurs sont belles.",
+      "Les fleurs sont belle.",
+      "Les fleur sont belles.",
+      "Les fleurs est belles."
+    ],
+    "detail": "L’adjectif « belles » s’accorde au féminin pluriel avec « fleurs »."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Complétez : « Les lettres que j’ai … »",
+    "answers": [
+      "écrites",
+      "écrit",
+      "écrite",
+      "écrire"
+    ],
+    "detail": "Avec avoir, le participe s’accorde avec le complément d’objet direct placé avant : « les lettres »."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Complétez : « Elles se sont … »",
+    "answers": [
+      "lavées",
+      "lavé",
+      "laver",
+      "lavée"
+    ],
+    "detail": "Le pronom « se » est ici complément d’objet direct : le participe s’accorde."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Complétez : « Elles se sont … les mains. »",
+    "answers": [
+      "lavé",
+      "lavées",
+      "lavée",
+      "laver"
+    ],
+    "detail": "Le COD « les mains » suit le verbe : « se » est indirect, donc pas d’accord."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Quelle forme est au subjonctif ?",
+    "answers": [
+      "que nous soyons",
+      "nous sommes",
+      "nous serons",
+      "nous étions"
+    ],
+    "detail": "« Que nous soyons » est le présent du subjonctif du verbe être."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Complétez : « Si j’avais le temps, je … »",
+    "answers": [
+      "viendrais",
+      "viendrai",
+      "viens",
+      "venir"
+    ],
+    "detail": "Après si + imparfait, la proposition principale emploie le conditionnel présent."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Complétez : « Il faut que tu … »",
+    "answers": [
+      "viennes",
+      "viens",
+      "viendras",
+      "venais"
+    ],
+    "detail": "« Il faut que » appelle le subjonctif."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Quelle orthographe est correcte ?",
+    "answers": [
+      "Ils ont leurs livres.",
+      "Ils ont leur livres.",
+      "Ils on leurs livres.",
+      "Ils ont leurs livre."
+    ],
+    "detail": "« Ont » est le verbe avoir ; « leurs » s’accorde avec les livres possédés."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Complétez : « Elle … Paris demain. »",
+    "answers": [
+      "va à",
+      "va a",
+      "vas à",
+      "vas a"
+    ],
+    "detail": "« À » est une préposition ; « a » est le verbe avoir."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Quel mot est un adverbe ?",
+    "answers": [
+      "doucement",
+      "douce",
+      "douceur",
+      "adoucir"
+    ],
+    "detail": "Un adverbe précise notamment le sens d’un verbe : parler doucement."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Quel est le pluriel de « cheval » ?",
+    "answers": [
+      "chevaux",
+      "chevals",
+      "chevaus",
+      "chevales"
+    ],
+    "detail": "Le pluriel de cheval est chevaux."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Quel est le pluriel de « bijou » ?",
+    "answers": [
+      "bijoux",
+      "bijous",
+      "bijou",
+      "bijoues"
+    ],
+    "detail": "Bijou fait partie des sept noms en -ou dont le pluriel prend un x."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Complétez : « … sont mes amis. »",
+    "answers": [
+      "Ce",
+      "Se",
+      "Ces",
+      "Ses"
+    ],
+    "detail": "« Ce » est un pronom démonstratif dans « ce sont »."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Complétez : « Je … ai parlé. »",
+    "answers": [
+      "leur",
+      "leurs",
+      "leures",
+      "leurent"
+    ],
+    "detail": "Le pronom personnel « leur » est invariable."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Quel temps est « nous avions fini » ?",
+    "answers": [
+      "Le plus-que-parfait",
+      "Le passé composé",
+      "Le futur antérieur",
+      "Le passé simple"
+    ],
+    "detail": "Le plus-que-parfait associe un auxiliaire à l’imparfait et un participe passé."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Quelle phrase emploie le futur antérieur ?",
+    "answers": [
+      "Quand tu auras terminé, appelle-moi.",
+      "Tu termineras demain.",
+      "Tu terminais hier.",
+      "Tu as terminé."
+    ],
+    "detail": "« Auras terminé » exprime une action future accomplie avant une autre."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Quel mot est féminin ?",
+    "answers": [
+      "Une échappatoire",
+      "Un échappatoire",
+      "Un intervalle",
+      "Un pétale"
+    ],
+    "detail": "Échappatoire est féminin ; intervalle et pétale sont masculins."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Complétez : « … soit votre choix, je le respecte. »",
+    "answers": [
+      "Quel que",
+      "Quelque",
+      "Qu’elle que",
+      "Quelques"
+    ],
+    "detail": "« Quel que » suivi du subjonctif s’accorde avec le sujet « choix »."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Quel est le sujet dans « Dans le jardin chantent les oiseaux » ?",
+    "answers": [
+      "Les oiseaux",
+      "Le jardin",
+      "Dans",
+      "Chantent"
+    ],
+    "detail": "Le sujet peut être placé après le verbe : ce sont les oiseaux qui chantent."
+  },
+  {
+    "category": "Grammaire",
+    "prompt": "Quelle phrase est à la voix passive ?",
+    "answers": [
+      "Le livre est lu par Léa.",
+      "Léa lit le livre.",
+      "Léa a lu le livre.",
+      "Léa lira le livre."
+    ],
+    "detail": "À la voix passive, le sujet subit l’action."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Qui a écrit Les Misérables ?",
+    "answers": [
+      "Victor Hugo",
+      "Émile Zola",
+      "Gustave Flaubert",
+      "Marcel Proust"
+    ],
+    "detail": "Victor Hugo publie Les Misérables en 1862."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Qui a écrit Madame Bovary ?",
+    "answers": [
+      "Gustave Flaubert",
+      "Honoré de Balzac",
+      "Stendhal",
+      "Albert Camus"
+    ],
+    "detail": "Le roman de Flaubert paraît en 1857."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Qui a écrit Le Petit Prince ?",
+    "answers": [
+      "Antoine de Saint-Exupéry",
+      "Jules Verne",
+      "Jean Giono",
+      "Jacques Prévert"
+    ],
+    "detail": "Ce conte philosophique paraît en 1943."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Qui a écrit Le Malade imaginaire ?",
+    "answers": [
+      "Molière",
+      "Racine",
+      "Corneille",
+      "Beaumarchais"
+    ],
+    "detail": "La dernière comédie de Molière est créée en 1673."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "À qui doit-on Les Fleurs du mal ?",
+    "answers": [
+      "Charles Baudelaire",
+      "Paul Verlaine",
+      "Arthur Rimbaud",
+      "Paul Éluard"
+    ],
+    "detail": "Le recueil de Baudelaire paraît en 1857."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Qui a écrit L’Étranger ?",
+    "answers": [
+      "Albert Camus",
+      "Jean-Paul Sartre",
+      "André Gide",
+      "André Malraux"
+    ],
+    "detail": "Meursault est le personnage principal de ce roman publié en 1942."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Quel auteur a créé le capitaine Nemo ?",
+    "answers": [
+      "Jules Verne",
+      "Victor Hugo",
+      "Alexandre Dumas",
+      "Maupassant"
+    ],
+    "detail": "Nemo apparaît notamment dans Vingt mille lieues sous les mers."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Qui a écrit Le Rouge et le Noir ?",
+    "answers": [
+      "Stendhal",
+      "Balzac",
+      "Flaubert",
+      "Zola"
+    ],
+    "detail": "Julien Sorel est le héros du roman paru en 1830."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Quel auteur a écrit À la recherche du temps perdu ?",
+    "answers": [
+      "Marcel Proust",
+      "Louis Aragon",
+      "André Breton",
+      "Paul Valéry"
+    ],
+    "detail": "La madeleine est associée à la mémoire involontaire dans cette œuvre."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Qui a écrit les Fables ?",
+    "answers": [
+      "Jean de La Fontaine",
+      "Molière",
+      "Racine",
+      "Voltaire"
+    ],
+    "detail": "Les Fables de La Fontaine mettent souvent en scène des animaux."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Qui a écrit Candide ?",
+    "answers": [
+      "Voltaire",
+      "Rousseau",
+      "Diderot",
+      "Montesquieu"
+    ],
+    "detail": "Ce conte philosophique de 1759 critique notamment l’optimisme aveugle."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Qui a écrit Les Trois Mousquetaires ?",
+    "answers": [
+      "Alexandre Dumas",
+      "Jules Verne",
+      "Victor Hugo",
+      "Prosper Mérimée"
+    ],
+    "detail": "Athos, Porthos et Aramis accueillent d’Artagnan dans ce roman."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Quel est le vrai nom de George Sand ?",
+    "answers": [
+      "Aurore Dupin",
+      "Colette Willy",
+      "Simone de Beauvoir",
+      "Marguerite Duras"
+    ],
+    "detail": "Aurore Dupin adopte le pseudonyme George Sand."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Qui a écrit Le Deuxième Sexe ?",
+    "answers": [
+      "Simone de Beauvoir",
+      "Simone Veil",
+      "Colette",
+      "George Sand"
+    ],
+    "detail": "Cet essai de 1949 est une œuvre majeure de la pensée féministe."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Qui a écrit Cyrano de Bergerac ?",
+    "answers": [
+      "Edmond Rostand",
+      "Victor Hugo",
+      "Alfred de Musset",
+      "Jean Anouilh"
+    ],
+    "detail": "La pièce est créée en 1897."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Quel mouvement est associé à André Breton ?",
+    "answers": [
+      "Le surréalisme",
+      "Le classicisme",
+      "Le naturalisme",
+      "Le romantisme"
+    ],
+    "detail": "Breton publie le Manifeste du surréalisme en 1924."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Quel écrivain est associé au naturalisme ?",
+    "answers": [
+      "Émile Zola",
+      "Jean Racine",
+      "Chrétien de Troyes",
+      "Pierre Corneille"
+    ],
+    "detail": "Zola est l’auteur du cycle des Rougon-Macquart."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Combien de vers comporte un sonnet traditionnel ?",
+    "answers": [
+      "14",
+      "12",
+      "16",
+      "10"
+    ],
+    "detail": "Un sonnet comporte deux quatrains et deux tercets."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Combien de syllabes compte un alexandrin ?",
+    "answers": [
+      "12",
+      "10",
+      "8",
+      "14"
+    ],
+    "detail": "L’alexandrin est un vers de douze syllabes."
+  },
+  {
+    "category": "Littérature",
+    "prompt": "Qui a écrit La Princesse de Clèves ?",
+    "answers": [
+      "Madame de Lafayette",
+      "Madame de Sévigné",
+      "George Sand",
+      "Colette"
+    ],
+    "detail": "Ce roman paraît anonymement en 1678."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Dans quelle région se trouve le Mont-Saint-Michel ?",
+    "answers": [
+      "Normandie",
+      "Bretagne",
+      "Pays de la Loire",
+      "Hauts-de-France"
+    ],
+    "detail": "Le Mont-Saint-Michel se trouve dans le département de la Manche."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Dans quelle région se trouve Strasbourg ?",
+    "answers": [
+      "Grand Est",
+      "Bourgogne-Franche-Comté",
+      "Hauts-de-France",
+      "Île-de-France"
+    ],
+    "detail": "Strasbourg est la préfecture du Grand Est."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Quelle ville est la préfecture de la Bretagne ?",
+    "answers": [
+      "Rennes",
+      "Brest",
+      "Nantes",
+      "Vannes"
+    ],
+    "detail": "Rennes est la préfecture de la région Bretagne."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Dans quelle région se trouve Bordeaux ?",
+    "answers": [
+      "Nouvelle-Aquitaine",
+      "Occitanie",
+      "Centre-Val de Loire",
+      "Normandie"
+    ],
+    "detail": "Bordeaux est la préfecture de Nouvelle-Aquitaine."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Dans quelle région se trouve Lyon ?",
+    "answers": [
+      "Auvergne-Rhône-Alpes",
+      "Grand Est",
+      "Occitanie",
+      "Provence-Alpes-Côte d’Azur"
+    ],
+    "detail": "Lyon est la préfecture d’Auvergne-Rhône-Alpes."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Quelle mer borde la Corse ?",
+    "answers": [
+      "La Méditerranée",
+      "La mer du Nord",
+      "La mer Baltique",
+      "La mer Noire"
+    ],
+    "detail": "La Corse est une île de Méditerranée."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Quelle région abrite les châteaux de Chambord et Chenonceau ?",
+    "answers": [
+      "Centre-Val de Loire",
+      "Bretagne",
+      "Grand Est",
+      "Occitanie"
+    ],
+    "detail": "Ces châteaux se trouvent dans le Val de Loire."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Quelle ville est surnommée la Ville rose ?",
+    "answers": [
+      "Toulouse",
+      "Lille",
+      "Rouen",
+      "Dijon"
+    ],
+    "detail": "Les briques de terre cuite donnent à Toulouse sa couleur caractéristique."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Quelle chaîne sépare la France de l’Espagne ?",
+    "answers": [
+      "Les Pyrénées",
+      "Les Alpes",
+      "Le Jura",
+      "Les Vosges"
+    ],
+    "detail": "Les Pyrénées forment une frontière naturelle entre les deux pays."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Quel océan borde Biarritz ?",
+    "answers": [
+      "L’Atlantique",
+      "Le Pacifique",
+      "L’Indien",
+      "L’Arctique"
+    ],
+    "detail": "Biarritz se trouve sur la côte basque, dans le golfe de Gascogne."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Dans quelle région se trouve Lille ?",
+    "answers": [
+      "Hauts-de-France",
+      "Grand Est",
+      "Normandie",
+      "Bretagne"
+    ],
+    "detail": "Lille est la préfecture des Hauts-de-France."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Quelle région abrite les calanques de Marseille ?",
+    "answers": [
+      "Provence-Alpes-Côte d’Azur",
+      "Occitanie",
+      "Corse",
+      "Nouvelle-Aquitaine"
+    ],
+    "detail": "Les calanques s’étendent sur le littoral entre Marseille et Cassis."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Quel fleuve traverse Paris ?",
+    "answers": [
+      "La Seine",
+      "La Loire",
+      "Le Rhône",
+      "La Garonne"
+    ],
+    "detail": "La Seine traverse la capitale."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Quel territoire français se trouve en Amérique du Sud ?",
+    "answers": [
+      "La Guyane",
+      "La Guadeloupe",
+      "Mayotte",
+      "La Réunion"
+    ],
+    "detail": "La Guyane est frontalière du Brésil et du Suriname."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Quelle île française se trouve dans l’océan Indien ?",
+    "answers": [
+      "La Réunion",
+      "La Martinique",
+      "La Corse",
+      "Belle-Île"
+    ],
+    "detail": "La Réunion se trouve à l’est de Madagascar."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Combien de régions compte la France métropolitaine ?",
+    "answers": [
+      "13",
+      "18",
+      "22",
+      "10"
+    ],
+    "detail": "La métropole compte 13 régions ; cinq autres régions sont ultramarines."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Quelle région est associée aux volcans de la chaîne des Puys ?",
+    "answers": [
+      "Auvergne-Rhône-Alpes",
+      "Bretagne",
+      "Île-de-France",
+      "Grand Est"
+    ],
+    "detail": "La chaîne des Puys se trouve dans le Puy-de-Dôme."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Quelle ville est célèbre pour les Hospices de Bourgogne ?",
+    "answers": [
+      "Beaune",
+      "Nice",
+      "Amiens",
+      "Bayonne"
+    ],
+    "detail": "Les Hospices de Beaune sont célèbres pour leurs toits de tuiles vernissées."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Quelle ville abrite le palais des Papes ?",
+    "answers": [
+      "Avignon",
+      "Arles",
+      "Nîmes",
+      "Aix-en-Provence"
+    ],
+    "detail": "Le palais des Papes rappelle la présence de la papauté à Avignon au XIVe siècle."
+  },
+  {
+    "category": "Régions & paysages",
+    "prompt": "Dans quel département se trouve Étretat ?",
+    "answers": [
+      "Seine-Maritime",
+      "Calvados",
+      "Finistère",
+      "Somme"
+    ],
+    "detail": "Les falaises d’Étretat bordent la Manche en Normandie."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "De quelle ville la bouillabaisse est-elle une spécialité ?",
+    "answers": [
+      "Marseille",
+      "Lille",
+      "Strasbourg",
+      "Rennes"
+    ],
+    "detail": "La bouillabaisse est une préparation provençale de poissons."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "À quelle région associe-t-on la choucroute ?",
+    "answers": [
+      "L’Alsace",
+      "La Bretagne",
+      "Le Pays basque",
+      "La Provence"
+    ],
+    "detail": "La choucroute repose sur du chou fermenté."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "Quel fromage est traditionnellement utilisé dans la tartiflette ?",
+    "answers": [
+      "Le reblochon",
+      "Le roquefort",
+      "Le camembert",
+      "Le brie"
+    ],
+    "detail": "La tartiflette associe pommes de terre, reblochon, oignons et souvent lardons."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "Quelle farine utilise-t-on traditionnellement pour une galette bretonne salée ?",
+    "answers": [
+      "Le sarrasin",
+      "Le maïs",
+      "Le riz",
+      "Le pois chiche"
+    ],
+    "detail": "Le sarrasin, appelé aussi blé noir, est caractéristique des galettes bretonnes."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "Quel plat est associé à Castelnaudary ?",
+    "answers": [
+      "Le cassoulet",
+      "La quiche",
+      "La bouillabaisse",
+      "La ratatouille"
+    ],
+    "detail": "Le cassoulet est préparé avec des haricots blancs et des viandes."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "Quel dessert est une tarte aux pommes renversée ?",
+    "answers": [
+      "La tarte Tatin",
+      "Le clafoutis",
+      "Le far breton",
+      "Le Paris-Brest"
+    ],
+    "detail": "Les pommes caramélisées cuisent sous la pâte avant le démoulage."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "Quel dessert est traditionnellement préparé avec des cerises ?",
+    "answers": [
+      "Le clafoutis",
+      "Le canelé",
+      "Le kouign-amann",
+      "Le financier"
+    ],
+    "detail": "Le clafoutis aux cerises est associé au Limousin."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "De quelle ville le canelé est-il une spécialité ?",
+    "answers": [
+      "Bordeaux",
+      "Dijon",
+      "Nancy",
+      "Reims"
+    ],
+    "detail": "Le canelé a une croûte caramélisée et un cœur tendre."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "Quel gâteau breton contient beaucoup de beurre ?",
+    "answers": [
+      "Le kouign-amann",
+      "Le baba",
+      "Le fraisier",
+      "Le saint-honoré"
+    ],
+    "detail": "Son nom breton signifie gâteau au beurre."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "Quelle ville est associée à la moutarde ?",
+    "answers": [
+      "Dijon",
+      "Toulon",
+      "Brest",
+      "Orléans"
+    ],
+    "detail": "Dijon est historiquement célèbre pour sa moutarde."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "Quel fromage est affiné dans les caves de Roquefort-sur-Soulzon ?",
+    "answers": [
+      "Le roquefort",
+      "Le comté",
+      "Le cantal",
+      "Le munster"
+    ],
+    "detail": "Le roquefort est un fromage persillé au lait de brebis."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "Quel fromage est associé à la Normandie ?",
+    "answers": [
+      "Le camembert",
+      "Le reblochon",
+      "Le beaufort",
+      "Le brocciu"
+    ],
+    "detail": "Le camembert est un fromage à pâte molle et croûte fleurie."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "Quel fromage corse est fabriqué à partir de lactosérum ?",
+    "answers": [
+      "Le brocciu",
+      "Le comté",
+      "Le brie",
+      "Le maroilles"
+    ],
+    "detail": "Le brocciu est notamment utilisé dans le fiadone."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "Quelle spécialité niçoise est faite de farine de pois chiche ?",
+    "answers": [
+      "La socca",
+      "La crêpe",
+      "La gaufre",
+      "La fougasse"
+    ],
+    "detail": "La socca est cuite en fine couche, traditionnellement au four à bois."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "Quel ingrédient caractérise la ratatouille ?",
+    "answers": [
+      "Les légumes d’été",
+      "Le riz",
+      "Les pommes",
+      "Les haricots secs"
+    ],
+    "detail": "Aubergines, courgettes, tomates et poivrons composent ce plat provençal."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "Quelle pâtisserie a la forme d’une roue ?",
+    "answers": [
+      "Le Paris-Brest",
+      "L’éclair",
+      "Le millefeuille",
+      "Le canelé"
+    ],
+    "detail": "La forme du Paris-Brest évoque la course cycliste du même nom."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "Qu’est-ce qu’une AOP ?",
+    "answers": [
+      "Une appellation d’origine protégée",
+      "Une association de pâtissiers",
+      "Une méthode de cuisson",
+      "Un label de prix"
+    ],
+    "detail": "L’AOP lie un produit à son origine géographique et à un savoir-faire."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "Quel plat mijote traditionnellement dans du vin rouge de Bourgogne ?",
+    "answers": [
+      "Le bœuf bourguignon",
+      "La blanquette",
+      "La choucroute",
+      "Le gratin dauphinois"
+    ],
+    "detail": "Le bœuf bourguignon est un plat de viande mijotée au vin rouge."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "Que contient traditionnellement une quiche lorraine ?",
+    "answers": [
+      "Des œufs, de la crème et des lardons",
+      "Du thon et du riz",
+      "Des pommes et du sucre",
+      "Des pois chiches"
+    ],
+    "detail": "La recette traditionnelle ne comporte pas de fromage."
+  },
+  {
+    "category": "Gastronomie",
+    "prompt": "Quel dessert est associé à la Lorraine et à Commercy ?",
+    "answers": [
+      "La madeleine",
+      "Le canelé",
+      "Le far",
+      "La tarte tropézienne"
+    ],
+    "detail": "La madeleine est un petit gâteau reconnaissable à sa forme de coquillage."
+  }
+]

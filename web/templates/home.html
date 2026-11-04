@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Parcours citoyen · Préparez l’examen civique{% endblock %}
+{% block content %}
+<section class="hero wrap">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="flag-icon" aria-hidden="true"><i></i><i></i><i></i></span> EXAMEN CIVIQUE · FRANCE</p>
+    <h1>Votre chemin vers <em>la citoyenneté.</em></h1>
+    <p class="lead">Révisez les questions de connaissance publiées pour chaque parcours, entraînez-vous en français et trouvez où passer votre examen.</p>
+    <div class="actions"><a class="button primary" href="#parcours">Choisir mon parcours <span>→</span></a><a class="button ghost" href="{{ url_for('french') }}">Pratiquer le français</a></div>
+    <div class="hero-note"><span class="note-dot"></span> Listes officielles vérifiées le 4 novembre 2026</div>
+  </div>
+  <div class="hero-art" aria-label="Illustration de la France et d’un voyageur">
+    <div class="map-orbit orbit-one"></div><div class="map-orbit orbit-two"></div>
+    {% include '_france_map.svg' %}
+    <div class="art-badge"><span>✦</span> Une étape à la fois</div>
+  </div>
+</section>
+<section class="photo-ribbon" aria-label="Découvrir la France en images">
+  <div class="photo-ribbon-item"><img src="{{ url_for('static', filename='images/paris.jpg') }}" alt="La tour Eiffel à Paris" width="400" height="230" loading="lazy"><span>PARIS <b>01 / 03</b></span></div>
+  <div class="photo-ribbon-item"><img src="{{ url_for('static', filename='images/mont-saint-michel.jpg') }}" alt="Le Mont-Saint-Michel en Normandie" width="400" height="230" loading="lazy"><span>NORMANDIE <b>02 / 03</b></span></div>
+  <div class="photo-ribbon-item"><img src="{{ url_for('static', filename='images/croissant.jpg') }}" alt="Un croissant, spécialité française" width="400" height="230" loading="lazy"><span>ART DE VIVRE <b>03 / 03</b></span></div>
+</section>
+<section class="section-light" id="parcours"><div class="wrap">
+  <div class="section-heading"><div><p class="eyebrow dark">CHOISISSEZ VOTRE OBJECTIF</p><h2>Trois parcours, un même élan.</h2></div><p>Les intitulés viennent des listes ministérielles. Les choix de réponse et les corrections sont rédigés pour cet entraînement.</p></div>
+  <div class="track-grid">
+    {% for slug, item in tracks.items() %}
+    <article class="track-card reveal"><div class="track-card-top"><div class="track-icon">{{ ['01','02','03'][loop.index0] }}</div><span class="flag-icon" aria-label="France"><i></i><i></i><i></i></span></div><p class="card-kicker">{{ item.short }}</p><h3>{{ item.title }}</h3><p>{{ item.data.questions|length }} questions de connaissance publiées à consulter par thème.</p><div class="track-meta"><span>📖 Catalogue complet</span><span>✦ {{ item.quiz|length }} QCM d’entraînement</span></div><a href="{{ url_for('track', slug=slug) }}" class="card-link">Explorer le parcours <span>→</span></a></article>
+    {% endfor %}
+  </div>
+</div></section>
+<section class="subjects-preview wrap" id="sujets">
+  <div class="section-heading"><div><p class="eyebrow">LES GRANDS SUJETS</p><h2>Comprendre la France.</h2></div><p>Des repères simples, des cartes à explorer et des questions pour retenir l’essentiel.</p></div>
+  <div class="subject-grid">
+    <a class="subject-card reveal" href="{{ url_for('subject', slug='politique') }}"><span class="subject-symbol">⚖</span><span class="subject-index">01 · INSTITUTIONS</span><h3>Politique & République</h3><p>Députés, sénateurs, élections et pouvoirs.</p><span class="subject-arrow">Explorer →</span></a>
+    <a class="subject-card reveal" href="{{ url_for('subject', slug='geographie') }}"><span class="subject-symbol">⌖</span><span class="subject-index">02 · TERRITOIRES</span><h3>Géographie interactive</h3><p>Villes, régions, reliefs et outre-mer.</p><span class="subject-arrow">Explorer →</span></a>
+    <a class="subject-card reveal" href="{{ url_for('subject', slug='histoire') }}"><span class="subject-symbol">✦</span><span class="subject-index">03 · CHRONOLOGIE</span><h3>Histoire & dates clés</h3><p>Une frise pour relier les grands événements.</p><span class="subject-arrow">Explorer →</span></a>
+  </div>
+</section>
+<section class="more-section wrap"><div class="section-heading"><div><p class="eyebrow">POUR ALLER PLUS LOIN</p><h2>Apprendre, lire, avancer.</h2></div></div><div class="more-grid"><a class="more-card reveal" href="{{ url_for('french') }}"><span class="more-icon">Aa</span><h3>Le français au quotidien</h3><p>Grammaire, textes courts et exercices de lecture.</p><span class="arrow">→</span></a><a class="more-card reveal" href="{{ url_for('centers') }}"><span class="more-icon">⌖</span><h3>Passer l’examen</h3><p>Retrouvez les annuaires de centres agréés et cherchez votre ville.</p><span class="arrow">→</span></a></div></section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='home.js') }}" defer></script>{% endblock %}

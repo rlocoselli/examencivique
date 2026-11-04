@@ -71,3 +71,79 @@ Games Services et ne peut pas être généré localement.
 Tester une bonne réponse, confirmer l’avancée, vérifier le déplacement puis le retour du dé. Refaire avec une mauvaise réponse pour le recul. Vérifier le bouton Android Retour, chaque catégorie, le passage de case 20/40, l’arrivée avec moins de 15 réponses et le bilan en fin de banque.
 
 Côté gamification : vérifier que l’XP, les jetons et les cœurs augmentent ou diminuent après chaque réponse, que le compteur de série passe à 1 au premier jour de jeu, que les quêtes du jour se valident et se paient, qu’un passage de niveau ouvre sa fenêtre et que l’épuisement des cœurs propose la recharge à 50 💎. Dans le menu, contrôler l’anneau d’objectif, les couronnes par mode et les onglets Succès / Quêtes / Ligue de « Ma progression ». Pour rejouer une journée différente sans attendre, effacer les données de l’application ou modifier la date du téléphone.
+# Site web Flask
+
+Le site compagnon se trouve dans `web/`. Pour le lancer localement :
+
+```bash
+python3 -m pip install -r web/requirements.txt
+python3 web/app.py
+```
+
+Pour AUDELA Deploy, le [Dockerfile](Dockerfile) à la racine construit uniquement
+le site Flask et le sert avec Gunicorn sur la porte interne `8000`. Dans
+AUDELA Deploy, créer une application à partir de ce dépôt GitHub, choisir le
+runtime Dockerfile et conserver la porte `8000`. Aucun volume ni variable
+d'environnement n'est nécessaire pour les données incluses. La configuration
+`PORT` est prise en charge si le service l'impose. La route `/` sert aussi de
+sonde de santé. Pour actualiser les données parlementaires et géographiques
+avant un nouveau déploiement :
+
+```bash
+python3 -m web.update_open_data
+```
+
+Ouvrir ensuite <http://127.0.0.1:5000/>. Le site reprend la palette et les
+questions de l'application mobile. Il contient les catalogues des questions de
+connaissance publiées pour la carte de séjour pluriannuelle (191), la carte de
+résident (209) et la naturalisation (244), des QCM pédagogiques, un test CSP de
+40 questions, des exercices de grammaire et de lecture, ainsi que les liens
+vers les deux annuaires de centres agréés.
+
+Les intitulés officiels sont dans `web/data/*_official.json`. Les réponses et
+choix proposés sont rédigés pour l'entraînement, et seules les questions avec
+correction vérifiée sont incluses dans les QCM (121 CSP, 20 résident, 36
+naturalisation). Les questions de mise en situation et les choix officiels ne
+sont pas publics. Le site n'émet aucune attestation de réussite.
+
+Après avoir modifié les banques de l'application ou les listes officielles,
+mettre les exports à jour avec :
+
+```bash
+python3 web/build_data.py
+python3 web/generate_mobile_banks.py
+```
+
+Sources vérifiées le 4 novembre 2026 : [CSP](https://formation-civique.interieur.gouv.fr/examen-civique/liste-officielle-des-questions-de-connaissance-csp/),
+[carte de résident](https://formation-civique.interieur.gouv.fr/examen-civique/liste-officielle-des-questions-de-connaissance-cr/),
+[naturalisation](https://www.immigration.interieur.gouv.fr/documentation/guides-textes-et-brochures/questions-de-connaissance-pour-lexamen-civique-nationalite-francaise.html),
+[centres FEI](https://www.france-education-international.fr/centres-d-examen/carte?type-centre=examen_civique)
+et [centres CCI](https://www.lefrancaisdesaffaires.fr/candidat/trouver-un-centre-agree/).
+
+La carte de l'accueil est dessinée à partir du contour de la France de
+[Natural Earth](https://www.naturalearthdata.com/), domaine public (échelle
+1:50m). Les photos de Paris, du Mont-Saint-Michel et du croissant sont les
+visuels déjà présents dans l'application ; leurs crédits figurent dans
+`docs/SALON_FRANCAIS.md`. Les animations respectent le réglage système de
+réduction des mouvements.
+
+La recherche de centres sur `/centres` utilise une copie locale d'un
+[recensement publié sur data.gouv.fr](https://www.data.gouv.fr/datasets/centres-dexamen-civique-agrees-en-france-recensement-au-10-octobre-2026)
+(Licence Ouverte 2.0), relevé le 10 octobre 2026 à partir des annuaires CCI
+et FEI. Elle cherche par ville, code postal, département, adresse ou nom de
+centre et filtre par réseau, sans quitter la page. Les fiches renvoient aux
+annuaires officiels pour vérifier l'agrément, les sessions et les coordonnées.
+Pour actualiser la copie locale après téléchargement du CSV :
+
+```bash
+python3 web/import_centers.py /chemin/vers/centres.csv
+python3 -m unittest discover -s web -p 'test_*.py'
+```
+
+Les pages `/sujets/politique`, `/sujets/geographie` et `/sujets/histoire`
+ajoutent des fiches de révision et des QCM tirés des banques existantes. La
+carte de géographie permet de sélectionner dix villes au clic ou au clavier
+et propose un défi de repérage. La frise d'histoire se filtre par thème.
+Les chiffres du Parlement sont vérifiés auprès de
+[l'Assemblée nationale](https://www2.assemblee-nationale.fr/decouvrir-l-assemblee/juniors)
+et du [Sénat](https://www.senat.fr/connaitre-le-senat/role-et-fonctionnement/mode-delection-des-senateurs.html).

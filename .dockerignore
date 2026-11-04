@@ -1,0 +1,7 @@
+*
+!Dockerfile
+!web/
+!web/**
+web/**/__pycache__/
+web/**/*.pyc
+web/test_*.py

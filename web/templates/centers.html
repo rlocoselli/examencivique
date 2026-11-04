@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block title %}Trouver un centre · Parcours citoyen{% endblock %}
+{% block content %}
+<section class="page-hero wrap centers-hero">
+  <a class="back" href="{{ url_for('home') }}">← Accueil</a>
+  <p class="eyebrow">PASSER L’EXAMEN</p>
+  <h1>Trouvez votre centre.</h1>
+  <p class="lead">Cherchez une ville, un code postal, un département ou le nom d’un centre. Les résultats s’affichent ici, sans quitter la page.</p>
+</section>
+<section class="section-light centers">
+  <div class="wrap">
+    <div class="directory-intro">
+      <div><p class="eyebrow dark">ANNUAIRE DES CENTRES</p><h2>Où passer l’examen ?</h2></div>
+      <p>Relevé du 10 octobre 2026 · {{ directory.centers|length }} centres recensés. Vérifiez les dates et l’agrément auprès de l’organisme avant de vous inscrire.</p>
+    </div>
+    <form class="city-search" method="get" id="center-search" role="search">
+      <label for="ville">Votre recherche</label>
+      <div class="search-row">
+        <span class="search-symbol" aria-hidden="true">⌕</span>
+        <input id="ville" name="ville" value="{{ query }}" placeholder="Ville, code postal, département ou centre" autocomplete="off" autofocus>
+        <button class="button primary" type="submit">Rechercher →</button>
+      </div>
+      <fieldset class="network-filters">
+        <legend>Réseau</legend>
+        <label><input type="radio" name="reseau" value="all" {% if network == 'all' %}checked{% endif %}> Tous</label>
+        <label><input type="radio" name="reseau" value="fei" {% if network == 'fei' %}checked{% endif %}> France Éducation international</label>
+        <label><input type="radio" name="reseau" value="cci" {% if network == 'cci' %}checked{% endif %}> CCI Paris Île-de-France</label>
+      </fieldset>
+    </form>
+    <div class="search-examples">Essayez :
+      <a href="{{ url_for('centers', ville='Grenoble') }}" data-query="Grenoble">Grenoble</a>
+      <a href="{{ url_for('centers', ville='Lyon') }}" data-query="Lyon">Lyon</a>
+      <a href="{{ url_for('centers', ville='75015') }}" data-query="75015">75015</a>
+      <a href="{{ url_for('centers', ville='38') }}" data-query="38">Département 38</a>
+    </div>
+
+    <section class="search-results" id="search-results" aria-live="polite" aria-label="Résultats de la recherche">
+      <div class="results-heading">
+        <h3 id="results-title">{% if query %}{{ total }} centre{{ 's' if total != 1 else '' }} trouvé{{ 's' if total != 1 else '' }} pour « {{ query }} »{% else %}Recherchez un centre près de chez vous{% endif %}</h3>
+        {% if query %}<span class="results-count" id="results-count">{{ total }} résultat{{ 's' if total != 1 else '' }}</span>{% else %}<span class="results-count" id="results-count" hidden></span>{% endif %}
+      </div>
+      <div class="results-list" id="results-list">
+        {% for center in matches %}
+        <article class="center-result">
+          <div class="center-result-main">
+            <div class="center-result-top"><span class="center-network">{{ center.network }}</span>{% if center.confidence != 'vérifié' %}<span class="center-unconfirmed">Coordonnées à vérifier</span>{% endif %}</div>
+            <h4>{{ center.name }}</h4>
+            <p class="center-location">⌖ {{ center.address }}{% if center.address %}, {% endif %}{{ center.postal_code }} {{ center.city }}</p>
+            {% if center.mentions %}<p class="center-mentions">{{ center.mentions }}</p>{% endif %}
+          </div>
+          <div class="center-result-actions">
+            {% if center.phone %}<a href="tel:{{ center.phone }}">{{ center.phone }}</a>{% endif %}
+            {% if center.website %}<a href="{{ center.website }}" target="_blank" rel="noopener noreferrer">Site du centre ↗</a>{% endif %}
+            {% if center.sources %}<a class="source-link" href="{{ center.sources[0] }}" target="_blank" rel="noopener noreferrer">Vérifier dans l’annuaire officiel ↗</a>{% endif %}
+          </div>
+        </article>
+        {% else %}
+          {% if query %}<div class="results-empty"><strong>Aucun centre trouvé pour « {{ query }} ».</strong><p>Essayez le code postal, le département ou une ville voisine. Les annuaires officiels ci-dessous peuvent contenir des ajouts récents.</p></div>{% else %}<div class="results-empty"><strong>Commencez par saisir votre ville.</strong><p>La recherche accepte aussi un code postal, un département ou le nom d’un organisme.</p></div>{% endif %}
+        {% endfor %}
+      </div>
+      {% if total > 60 %}<p class="results-limit" id="results-limit">Les 60 premiers centres sont affichés. Précisez votre recherche pour voir les autres.</p>{% else %}<p class="results-limit" id="results-limit" hidden></p>{% endif %}
+    </section>
+
+    <div class="directory-sources">
+      <h3>Vérifier et s’inscrire</h3>
+      <p>Ce catalogue est une photographie du 10 octobre 2026, établie par une plateforme indépendante à partir des deux réseaux agréés. Les sessions, tarifs et coordonnées peuvent changer.</p>
+      <div class="directory-links">
+        <a href="https://www.france-education-international.fr/centres-d-examen/carte?type-centre=examen_civique" target="_blank" rel="noopener noreferrer">Annuaire FEI ↗</a>
+        <a href="https://www.lefrancaisdesaffaires.fr/candidat/trouver-un-centre-agree/" target="_blank" rel="noopener noreferrer">Annuaire CCI ↗</a>
+        <a href="{{ directory.dataset }}" target="_blank" rel="noopener noreferrer">Jeu de données et licence ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='centers.js') }}" defer></script>{% endblock %}

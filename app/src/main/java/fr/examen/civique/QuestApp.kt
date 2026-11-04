@@ -82,6 +82,16 @@ private fun pool(mode: Int): List<Question> = (questions + extraQuestions + more
             } else if (mode == -2) HymnScreen({ mode = -1 }, { mode = 5; session++ })
             else if (mode == -3) HubScreen(hubTab) { mode = -1 }
             else if (mode == -4) CivicMenu { route -> mode = when (route) { "civic-practice" -> -5; "civic-test" -> -6; else -> -1 }; session++ }
+            else if (mode == -8 || mode == -9) OfficialTrackMenu(if (mode == -8) "resident" else "naturalisation") { route ->
+                mode = when (route) { "resident-practice" -> -10; "resident-test" -> -11; "naturalisation-practice" -> -12; "naturalisation-test" -> -13; else -> -1 }
+                session++
+            }
+            else if (mode in -13..-10) key(session) {
+                val route = when (mode) { -10 -> "resident-practice"; -11 -> "resident-test"; -12 -> "naturalisation-practice"; else -> "naturalisation-test" }
+                val parent = if (mode == -10 || mode == -11) -8 else -9
+                BackHandler { mode = parent }
+                AdditionalQuiz(route) { mode = parent }
+            }
             else if (mode in -7..-5) key(session) {
                 BackHandler { mode = if (mode == -7) -1 else -4 }
                 AdditionalQuiz(when (mode) { -5 -> "civic-practice"; -6 -> "civic-test"; else -> "photos" }) { mode = if (mode == -7) -1 else -4 }
@@ -121,6 +131,18 @@ private fun pool(mode: Int): List<Question> = (questions + extraQuestions + more
                         SuggestionChip(onClick = { start(-6) }, label = { Text("40 questions · 45 min", color = Color.White) })
                     }
                     Text("Découvrir la préparation →", color = Gold, fontWeight = FontWeight.Bold)
+                }
+            }
+            Card(onClick = { start(-8) }, modifier = Modifier.fillMaxWidth()) {
+                Column(Modifier.padding(18.dp)) {
+                    Text("CARTE DE RÉSIDENT", color = Gold, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                    Text("${residentPrompts.size} questions publiées · ${residentBank.size} QCM pédagogiques", fontSize = 15.sp)
+                }
+            }
+            Card(onClick = { start(-9) }, modifier = Modifier.fillMaxWidth()) {
+                Column(Modifier.padding(18.dp)) {
+                    Text("NATURALISATION", color = Gold, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                    Text("${naturalisationPrompts.size} questions publiées · ${naturalisationBank.size} QCM pédagogiques", fontSize = 15.sp)
                 }
             }
             GameBar()
