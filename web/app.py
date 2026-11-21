@@ -25,6 +25,7 @@ def key(text):
 
 
 PRACTICE = read("practice.json")
+ADDITIONAL_PRACTICE = read("additional_practice.json")
 CENTER_DIRECTORY = read("centers.json")
 PARLIAMENT = read("parliament.json")
 REGIONS = read("regions.json")
@@ -38,6 +39,8 @@ TRACKS = {
 for track in TRACKS.values():
     track["quiz"] = [dict(BY_PROMPT[key(q["prompt"])], theme=q["theme"])
                      for q in track["data"]["questions"] if key(q["prompt"]) in BY_PROMPT]
+for question in ADDITIONAL_PRACTICE:
+    TRACKS[question["mode"]]["quiz"].append(question)
 
 POLITICS_POOL = [q for q in TRACKS["csp"]["quiz"] if q["theme"] == "Système institutionnel et politique"]
 HISTORY_POOL = [q for q in TRACKS["csp"]["quiz"] if q["theme"] == "Histoire géographie et culture"][:17]
@@ -86,7 +89,7 @@ def quiz(slug):
         pool = {"politique": POLITICS_POOL, "histoire": HISTORY_POOL, "geographie": GEOGRAPHY_POOL}[slug]
     else:
         abort(404)
-    exam = slug == "csp" and request.args.get("mode") == "exam"
+    exam = slug in TRACKS and request.args.get("mode") == "exam"
     deck = random.sample(pool, min(40 if exam else 20, len(pool)))
     return render_template("quiz.html", slug=slug, title=title, deck=deck, exam=exam,
                            minutes=45 if exam else 20)
@@ -95,6 +98,16 @@ def quiz(slug):
 @app.route("/francais")
 def french():
     return render_template("french.html", lessons=LESSONS)
+
+
+@app.route("/guide")
+def guide():
+    return render_template("guide.html")
+
+
+@app.route("/hymne")
+def hymn():
+    return render_template("hymn.html")
 
 
 @app.route("/sujets/<slug>")

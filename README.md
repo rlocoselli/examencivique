@@ -147,3 +147,9 @@ et propose un défi de repérage. La frise d'histoire se filtre par thème.
 Les chiffres du Parlement sont vérifiés auprès de
 [l'Assemblée nationale](https://www2.assemblee-nationale.fr/decouvrir-l-assemblee/juniors)
 et du [Sénat](https://www.senat.fr/connaitre-le-senat/role-et-fonctionnement/mode-delection-des-senateurs.html).
+
+## Site web : guide et entraînement civique
+
+Le site Flask dans `web/` propose un guide des cinq thèmes de l’examen, une page de La Marseillaise avec les paroles du premier couplet et une version au piano, ainsi que des QCM pour les parcours CSP, carte de résident et naturalisation. `web/data/additional_practice.json` ajoute des questions et des corrections pédagogiques aux données déjà exportées depuis l’application Android. Les dix questions marquées `original` sont des créations d’entraînement ; les autres intitulés proviennent des listes publiques. Les choix et explications sont rédigés pour le site et ne sont pas des corrigés officiels.
+
+La piste `web/static/audio/marseillaise_piano.ogg` reprend l’enregistrement déjà utilisé par l’application Android, avec les mêmes crédits indiqués dans `Hymn.kt`. Les règles de l’examen et les fiches par thème sont liées depuis la page `/guide`.
