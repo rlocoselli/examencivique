@@ -1,11 +1,12 @@
 """Parcours citoyen: a companion Flask site for the Android app."""
 import json
+import os
 import random
 import re
 import unicodedata
 from pathlib import Path
 
-from flask import Flask, abort, jsonify, render_template, request
+from flask import Flask, Response, abort, jsonify, render_template, request, url_for
 try:
     from .subjects import HISTORY_EVENTS, PLACES
 except ImportError:
@@ -13,6 +14,31 @@ except ImportError:
 
 BASE = Path(__file__).resolve().parent
 app = Flask(__name__)
+SITE_ORIGIN = os.environ.get("PUBLIC_BASE_URL", "https://parcourscitoyen.audeladedonnees.fr").rstrip("/")
+
+
+@app.context_processor
+def seo_context():
+    return {"canonical_url": SITE_ORIGIN + request.path,
+            "site_origin": SITE_ORIGIN}
+
+
+@app.route("/robots.txt")
+def robots():
+    return Response(f"User-agent: *\nAllow: /\nSitemap: {SITE_ORIGIN}/sitemap.xml\n",
+                    mimetype="text/plain")
+
+
+@app.route("/sitemap.xml")
+def sitemap():
+    paths = [url_for("home"), url_for("guide"), url_for("hymn"),
+             url_for("french"), url_for("centers")]
+    paths += [url_for("track", slug=slug) for slug in TRACKS]
+    paths += [url_for("subject", slug=slug)
+              for slug in ("politique", "geographie", "histoire")]
+    entries = "".join(f"<url><loc>{SITE_ORIGIN}{path}</loc></url>" for path in paths)
+    xml = f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{entries}</urlset>'
+    return Response(xml, mimetype="application/xml")
 
 
 def read(name):

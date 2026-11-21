@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
-{% block title %}{{ item.title }} · Parcours citoyen{% endblock %}
+{% block title %}{{ item.title }} : questions de l’examen civique · Parcours citoyen{% endblock %}
+{% block description %}Révisez les {{ item.data.questions|length }} questions publiées pour {{ item.title|lower }} et entraînez-vous avec {{ item.quiz|length }} QCM pédagogiques indépendants.{% endblock %}
 {% block content %}
 <section class="page-hero wrap"><a class="back" href="{{ url_for('home') }}#parcours">← Tous les parcours</a><p class="eyebrow">EXAMEN CIVIQUE · {{ item.short|upper }}</p><h1>{{ item.title }}</h1><p class="lead">{{ item.data.questions|length }} questions de connaissance issues de la liste officielle. Explorez-les par thème ou entraînez-vous avec {{ item.quiz|length }} QCM pédagogiques.</p><div class="actions"><a class="button primary" href="{{ url_for('quiz', slug=slug) }}">Lancer un entraînement <span>→</span></a><a class="button ghost" href="{{ url_for('quiz', slug=slug, mode='exam') }}">Test 40 questions · 45 min</a><a class="button ghost" href="{{ url_for('guide') }}">Guide des sujets</a><a class="button ghost" href="{{ item.data.source }}" target="_blank" rel="noopener">Consulter la source officielle ↗</a></div></section>
 <section class="section-light catalogue"><div class="wrap"><div class="section-heading"><div><p class="eyebrow dark">LISTE DES QUESTIONS</p><h2>Réviser à votre rythme.</h2></div><p>{{ questions|length }} résultat{{ 's' if questions|length != 1 else '' }} · Les situations de l’examen ne sont pas publiées.</p></div>

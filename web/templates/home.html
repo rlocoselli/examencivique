@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
-{% block title %}Parcours citoyen · Préparez l’examen civique{% endblock %}
+{% block title %}Examen civique : QCM, guide et centres · Parcours citoyen{% endblock %}
+{% block description %}Préparez l’examen civique avec des QCM pour la carte de résident, la naturalisation et le séjour pluriannuel. Guide, français et centres d’examen.{% endblock %}
+{% block structured_data %}<script type="application/ld+json">{{ {'@context':'https://schema.org','@type':'WebSite','name':'Parcours citoyen','url':site_origin ~ '/','inLanguage':'fr-FR','description':'Site indépendant de préparation à l’examen civique en France.'}|tojson }}</script>{% endblock %}
 {% block content %}
 <section class="hero wrap">
   <div class="hero-copy">
     <p class="eyebrow"><span class="flag-icon" aria-hidden="true"><i></i><i></i><i></i></span> EXAMEN CIVIQUE · FRANCE</p>
-    <h1>Votre chemin vers <em>la citoyenneté.</em></h1>
-    <p class="lead">Révisez les questions de connaissance publiées pour chaque parcours, entraînez-vous en français et trouvez où passer votre examen.</p>
+    <h1>Préparez <em>l’examen civique.</em></h1>
+    <p class="lead">Révisez les questions publiées pour la carte de résident, la naturalisation ou le séjour pluriannuel. Entraînez-vous en français et trouvez un centre d’examen.</p>
     <div class="actions"><a class="button primary" href="#parcours">Choisir mon parcours <span>→</span></a><a class="button ghost" href="{{ url_for('french') }}">Pratiquer le français</a></div>
     <div class="hero-note"><span class="note-dot"></span> Listes officielles vérifiées le 4 novembre 2026</div>
   </div>

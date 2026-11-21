@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#12233f">
   <title>{% block title %}Parcours citoyen{% endblock %}</title>
+  <meta name="description" content="{% block description %}Préparez l’examen civique en France avec des questions d’entraînement, un guide des thèmes, des exercices de français et un annuaire de centres. Site indépendant.{% endblock %}">
+  <meta name="robots" content="{% block robots %}index,follow{% endblock %}">
+  {% block canonical %}<link rel="canonical" href="{{ canonical_url }}">{% endblock %}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Parcours citoyen">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="{{ self.title()|striptags|trim }}">
+  <meta property="og:description" content="{{ self.description()|striptags|trim }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta name="twitter:card" content="summary">
+  {% block structured_data %}{% endblock %}
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
