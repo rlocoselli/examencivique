@@ -55,6 +55,7 @@ for question in ADDITIONAL_PRACTICE:
 # available for catalogue explanations, where no distractors are displayed.
 REVIEWED_RESIDENT_CHOICES = read("reviewed_resident_choices.json")
 REVIEWED_RESIDENT_EXPLANATIONS = read("reviewed_resident_explanations.json")
+REVIEWED_SHARED_QUESTIONS = read("reviewed_shared_questions.json")
 for slug in ("resident", "naturalisation"):
     track = TRACKS[slug]
     track["catalogue_answers"] = track["quiz"]
@@ -71,6 +72,14 @@ for slug in ("resident", "naturalisation"):
         track["quiz"] = base + original + reviewed
     else:
         track["quiz"] = base + original
+    by_prompt = {key(q["prompt"]): q for q in track["catalogue_answers"]}
+    for reviewed in REVIEWED_SHARED_QUESTIONS:
+        source = by_prompt[key(reviewed["prompt"])]
+        question = dict(source)
+        question["answers"] = [source["answers"][0], *reviewed["wrong"]]
+        question["detail"] = reviewed["detail"]
+        question["answer_source"] = reviewed["answer_source"]
+        track["quiz"].append(question)
 
 POLITICS_POOL = [q for q in TRACKS["csp"]["quiz"] if q["theme"] == "Système institutionnel et politique"]
 HISTORY_POOL = [q for q in TRACKS["csp"]["quiz"] if q["theme"] == "Histoire géographie et culture"][:17]

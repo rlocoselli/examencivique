@@ -8,8 +8,8 @@ class StudyGuideTests(unittest.TestCase):
         self.client = app.test_client()
 
     def test_exam_banks_have_four_choices_and_an_explanation(self):
-        self.assertEqual(len(TRACKS['resident']['quiz']), 40)
-        self.assertGreaterEqual(len(TRACKS['naturalisation']['quiz']), 40)
+        self.assertEqual(len(TRACKS['resident']['quiz']), 60)
+        self.assertEqual(len(TRACKS['naturalisation']['quiz']), 61)
         for mode in ('resident', 'naturalisation'):
             self.assertEqual(len({q['prompt'] for q in TRACKS[mode]['quiz']}), len(TRACKS[mode]['quiz']))
             for question in TRACKS[mode]['quiz']:
@@ -36,6 +36,7 @@ class StudyGuideTests(unittest.TestCase):
         self.assertIn('Réponse pédagogique :', page)
         self.assertIn('aucun corrigé fiable', page)
         self.assertIn('Où est le siège du Parlement européen ?', page)
+        self.assertIn('Source de la réponse', page)
 
     def test_resident_exam_uses_reviewed_choices(self):
         questions = {q['prompt']: q for q in TRACKS['resident']['quiz']}
@@ -45,6 +46,10 @@ class StudyGuideTests(unittest.TestCase):
         self.assertIn('article 89', constitution['detail'])
         self.assertTrue(all('ticket de caisse' not in answer.casefold()
                             for q in TRACKS['resident']['quiz'] for answer in q['answers']))
+        for mode in ('resident', 'naturalisation'):
+            sourced = [q for q in TRACKS[mode]['quiz'] if q.get('answer_source')]
+            self.assertEqual(len(sourced), 20)
+            self.assertTrue(all(q['answer_source'].startswith('https://') for q in sourced))
 
 
 if __name__ == '__main__':

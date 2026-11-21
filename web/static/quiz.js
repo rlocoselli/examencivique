@@ -18,7 +18,13 @@ function render() {
       const given = document.createElement('p'); given.textContent = `Votre réponse : ${responses[position]?.answer || 'Aucune réponse'}`;
       const expected = document.createElement('p'); expected.className = 'review-answer'; expected.textContent = `Réponse attendue : ${question.answers[0]}`;
       const explanation = document.createElement('p'); explanation.textContent = question.detail;
-      item.append(summary, given, expected, explanation); review.append(item);
+      item.append(summary, given, expected, explanation);
+      if (question.answer_source) {
+        const source = document.createElement('a'); source.href = question.answer_source;
+        source.target = '_blank'; source.rel = 'noopener noreferrer';
+        source.textContent = 'Vérifier la réponse sur une source publique ↗'; item.append(source);
+      }
+      review.append(item);
     });
     quiz.querySelector('.result').append(review);
     return;
@@ -45,7 +51,13 @@ function render() {
       [...answers.children].forEach((child, j) => {child.disabled = true; if (q.choices[j].good) child.classList.add('correct'); else if (j === i) child.classList.add('incorrect');});
       const heading = document.createElement('strong'); heading.textContent = choice.good ? 'Bonne réponse !' : 'À retenir';
       const detail = document.createElement('p'); detail.textContent = q.detail;
-      feedback.append(heading, detail); next.hidden = false;
+      feedback.append(heading, detail);
+      if (q.answer_source) {
+        const source = document.createElement('a'); source.href = q.answer_source;
+        source.target = '_blank'; source.rel = 'noopener noreferrer';
+        source.textContent = 'Vérifier la réponse ↗'; feedback.append(source);
+      }
+      next.hidden = false;
       next.textContent = index === shuffled.length - 1 ? 'Voir mon bilan →' : 'Question suivante →';
     });
     answers.append(button);

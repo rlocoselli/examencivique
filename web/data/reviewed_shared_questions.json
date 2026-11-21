@@ -1,0 +1,202 @@
+[
+  {
+    "prompt": "Quel numéro d'urgence permet d'appeler la police ?",
+    "wrong": [
+      "15",
+      "18",
+      "114"
+    ],
+    "detail": "Le 17 permet de joindre la police ou la gendarmerie en cas d'urgence. Le 112 est aussi utilisable et oriente vers le service adapté.",
+    "answer_source": "https://www.service-public.fr/particuliers/vosdroits/F33953"
+  },
+  {
+    "prompt": "Que garantit la liberté de la presse ?",
+    "wrong": [
+      "La publication sans aucune limite légale",
+      "Le droit exclusif des administrations de publier",
+      "L'interdiction de critiquer les pouvoirs publics"
+    ],
+    "detail": "La liberté de la presse permet d'informer et de publier. Elle s'exerce dans les limites prévues par la loi, notamment pour protéger les droits d'autrui.",
+    "answer_source": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006527437"
+  },
+  {
+    "prompt": "En 1944, qu'est-ce qui a changé pour les femmes ?",
+    "wrong": [
+      "Elles ont obtenu le droit de vote en 1789",
+      "Elles ont perdu le droit d'être élues",
+      "Le suffrage universel masculin a été instauré"
+    ],
+    "detail": "L'ordonnance du 21 avril 1944 accorde aux Françaises le droit de vote et d'éligibilité. Elles votent pour la première fois en 1945.",
+    "answer_source": "https://www.vie-publique.fr/files/rapport/pdf/024000123.pdf"
+  },
+  {
+    "prompt": "Quelles sont les affaires traitées par le conseil de prud'hommes ?",
+    "wrong": [
+      "Les litiges entre commerçants sur leurs ventes",
+      "Les procès criminels",
+      "Les litiges entre voisins sur la propriété"
+    ],
+    "detail": "Le conseil de prud'hommes règle les litiges individuels liés au contrat de travail de droit privé entre salarié et employeur.",
+    "answer_source": "https://www.service-public.fr/particuliers/vosdroits/F33833"
+  },
+  {
+    "prompt": "Où faut-il déclarer la naissance d'un enfant ?",
+    "wrong": [
+      "À la préfecture du domicile",
+      "Au tribunal judiciaire du domicile",
+      "À la caisse d'assurance maladie"
+    ],
+    "detail": "La déclaration de naissance s'effectue à la mairie du lieu où l'enfant est né. Elle permet d'établir l'acte de naissance.",
+    "answer_source": "https://www.service-public.fr/particuliers/vosdroits/F961"
+  },
+  {
+    "prompt": "Quel est le rôle du Défenseur des droits ?",
+    "wrong": [
+      "Voter les lois à la place du Parlement",
+      "Diriger les tribunaux pénaux",
+      "Délivrer les titres de séjour"
+    ],
+    "detail": "Le Défenseur des droits aide à protéger les droits des personnes dans leurs relations avec les services publics et lutte contre les discriminations.",
+    "answer_source": "https://www.defenseurdesdroits.fr/le-defenseur-des-droits-facile-lire-et-comprendre-181"
+  },
+  {
+    "prompt": "Qui était une figure de la Résistance française pendant la Seconde Guerre mondiale ?",
+    "wrong": [
+      "Louis XIV",
+      "Napoléon Ier",
+      "Louis Pasteur"
+    ],
+    "detail": "Jean Moulin a joué un rôle majeur dans l'unification de la Résistance intérieure pendant la Seconde Guerre mondiale.",
+    "answer_source": "https://www.cheminsdememoire.gouv.fr/fr/memorial-jean-moulin"
+  },
+  {
+    "prompt": "Que garantit le principe de laïcité ?",
+    "wrong": [
+      "Une religion officielle imposée à tous",
+      "L'interdiction de toute croyance personnelle",
+      "Un traitement différent selon la religion"
+    ],
+    "detail": "La laïcité garantit la liberté de conscience et l'égalité de traitement. L'État et ses agents ne favorisent aucune conviction religieuse.",
+    "answer_source": "https://eduscol.education.gouv.fr/6096/laicite"
+  },
+  {
+    "prompt": "Au nom de quoi l'État justifie-t-il la restriction des droits ?",
+    "wrong": [
+      "La préférence personnelle d'un élu",
+      "La seule opinion de l'administration",
+      "L'appartenance à une religion"
+    ],
+    "detail": "Une restriction doit avoir une base légale et répondre notamment à la protection de l'ordre public ou des droits d'autrui. Elle ne dépend pas de la volonté arbitraire d'un élu.",
+    "answer_source": "https://www.vie-publique.fr/files/rapport/pdf/279748.pdf"
+  },
+  {
+    "prompt": "Depuis quand les Français élisent-ils le président de la République au suffrage universel direct ?",
+    "wrong": [
+      "Depuis l'élection de 1789",
+      "Depuis l'élection de 1958",
+      "Depuis l'élection de 2002"
+    ],
+    "detail": "La réforme de 1962 instaure l'élection du président au suffrage universel direct ; la première élection selon cette règle a lieu en 1965.",
+    "answer_source": "https://www.vie-publique.fr/fiches/38016-la-revision-constitutionnelle-et-le-referendum-de-1962"
+  },
+  {
+    "prompt": "Quel est le rôle du président de la République ?",
+    "wrong": [
+      "Voter seul toutes les lois",
+      "Diriger tous les tribunaux",
+      "Gérer seul les communes"
+    ],
+    "detail": "L'article 5 de la Constitution lui confie le respect de la Constitution et le fonctionnement régulier des pouvoirs publics.",
+    "answer_source": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006527459"
+  },
+  {
+    "prompt": "Pour quel motif peut-on limiter la liberté d'expression ?",
+    "wrong": [
+      "Empêcher toute critique du gouvernement",
+      "Favoriser une seule opinion politique",
+      "Supprimer toutes les opinions minoritaires"
+    ],
+    "detail": "La liberté d'expression est protégée, mais la loi peut prévoir des limites pour protéger les droits d'autrui et l'ordre public.",
+    "answer_source": "https://www.vie-publique.fr/files/rapport/pdf/297518.pdf"
+  },
+  {
+    "prompt": "Quel est l'hymne de l'Union européenne ?",
+    "wrong": [
+      "La Marseillaise",
+      "Le Chant des partisans",
+      "God Save the King"
+    ],
+    "detail": "L'hymne de l'Union européenne est la mélodie de l'Ode à la joie de Beethoven, sans paroles officielles.",
+    "answer_source": "https://european-union.europa.eu/principles-countries-history/symbols_fr"
+  },
+  {
+    "prompt": "De quoi est composé le drapeau européen ?",
+    "wrong": [
+      "Douze étoiles bleues sur fond blanc",
+      "Vingt-sept étoiles dorées sur fond bleu",
+      "Trois bandes bleue, blanche et rouge"
+    ],
+    "detail": "Le drapeau européen montre douze étoiles dorées en cercle sur fond bleu. Le nombre douze ne varie pas avec le nombre d'États membres.",
+    "answer_source": "https://www.consilium.europa.eu/fr/policies/eu-flag/"
+  },
+  {
+    "prompt": "Quel traité concerne la construction de l'Union européenne ?",
+    "wrong": [
+      "Le traité de Versailles de 1919",
+      "Le traité de Verdun de 843",
+      "Le traité de Tordesillas de 1494"
+    ],
+    "detail": "Le traité de Maastricht, signé en 1992, fonde l'Union européenne. Les autres traités cités concernent d'autres périodes historiques.",
+    "answer_source": "https://france.representation.ec.europa.eu/system/files/2021-10/Symboles.pdf"
+  },
+  {
+    "prompt": "Qu'est-ce que l'État de droit ?",
+    "wrong": [
+      "Un État où le gouvernement est au-dessus des lois",
+      "Un État sans tribunaux indépendants",
+      "Un État où seule la police décide des règles"
+    ],
+    "detail": "Dans un État de droit, les autorités publiques sont elles aussi soumises au droit et leurs décisions peuvent être contrôlées.",
+    "answer_source": "https://www.vie-publique.fr/files/2025-09/9782111741454_Extrait.pdf"
+  },
+  {
+    "prompt": "Quelle aide permet aux personnes qui ont des difficultés financières d'avoir un avocat ?",
+    "wrong": [
+      "L'aide personnalisée au logement",
+      "La prime d'activité",
+      "L'allocation de rentrée scolaire"
+    ],
+    "detail": "L'aide juridictionnelle peut prendre en charge tout ou partie des frais de justice et des honoraires d'avocat selon les conditions de ressources et de situation.",
+    "answer_source": "https://www.service-public.fr/particuliers/vosdroits/F18074"
+  },
+  {
+    "prompt": "Quel est le rôle du Premier ministre ?",
+    "wrong": [
+      "Présider la Cour de cassation",
+      "Voter seul les lois",
+      "Élire les maires"
+    ],
+    "detail": "L'article 21 de la Constitution prévoit que le Premier ministre dirige l'action du Gouvernement.",
+    "answer_source": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006527485"
+  },
+  {
+    "prompt": "Travailler sans être déclaré est :",
+    "wrong": [
+      "Toujours autorisé si le salaire est faible",
+      "Obligatoire pour une première embauche",
+      "Autorisé avec l'accord verbal du salarié"
+    ],
+    "detail": "Un emploi salarié doit être déclaré selon les règles applicables. Le travail dissimulé expose l'employeur à des sanctions.",
+    "answer_source": "https://www.urssaf.fr/accueil/employeur/embaucher-gerer-salaries/embaucher/declaration-prealable-embauche.html"
+  },
+  {
+    "prompt": "Quel État a quitté l'Union européenne en 2020 ?",
+    "wrong": [
+      "La Suisse",
+      "La Norvège",
+      "L'Irlande"
+    ],
+    "detail": "Le Royaume-Uni a quitté l'Union européenne le 31 janvier 2020. La Suisse et la Norvège n'en étaient pas membres.",
+    "answer_source": "https://www.consilium.europa.eu/fr/policies/the-eu-uk-withdrawal-agreement/timeline-eu-uk-withdrawal-agreement/"
+  }
+]
