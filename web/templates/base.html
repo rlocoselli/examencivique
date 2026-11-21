@@ -11,7 +11,8 @@
   <div class="tricolour" aria-hidden="true"><i></i><i></i><i></i></div>
   <header class="site-header wrap">
     <a class="brand" href="{{ url_for('home') }}"><span class="brand-mark">✦</span><span>PARCOURS<br><strong>CITOYEN</strong></span><span class="mini-flag" aria-label="Drapeau français"><i></i><i></i><i></i></span></a>
-    <nav aria-label="Navigation principale">
+    <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    <nav id="primary-nav" aria-label="Navigation principale">
       <a href="{{ url_for('home') }}#parcours">Examens</a>
       <a href="{{ url_for('home') }}#sujets">Sujets</a>
       <a href="{{ url_for('guide') }}">Guide</a>
@@ -23,5 +24,6 @@
   <main>{% block content %}{% endblock %}</main>
   <footer class="site-footer wrap"><span>Parcours citoyen · entraînement indépendant</span><span>Les résultats du site ne sont pas une attestation officielle.</span></footer>
   {% block scripts %}{% endblock %}
+  <script src="{{ url_for('static', filename='mobile-nav.js') }}" defer></script>
 </body>
 </html>
