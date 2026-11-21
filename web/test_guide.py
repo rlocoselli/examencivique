@@ -25,6 +25,13 @@ class StudyGuideTests(unittest.TestCase):
         self.assertIn(b'40 questions', self.client.get('/guide').data)
         self.assertIn(b'marseillaise_piano.ogg', self.client.get('/hymne').data)
 
+    def test_catalogue_shows_corrections_and_marks_unanswered_questions(self):
+        page = self.client.get('/parcours/resident').data.decode()
+        self.assertIn('Voir la réponse et l’explication', page)
+        self.assertIn('Réponse pédagogique :', page)
+        self.assertIn('aucun corrigé fiable', page)
+        self.assertIn('Où est le siège du Parlement européen ?', page)
+
 
 if __name__ == '__main__':
     unittest.main()

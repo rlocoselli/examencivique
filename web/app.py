@@ -24,6 +24,15 @@ def key(text):
     return re.sub(r"[^a-z0-9]", "", plain)
 
 
+THEME_CONTEXT = {
+    "Principes et valeurs de la République": "Révisez les symboles, la liberté de conscience, la laïcité et l’égalité devant la loi. Cherchez comment ce principe s’applique aux personnes et aux services publics.",
+    "Système institutionnel et politique": "Identifiez l’institution concernée et sa compétence. Le Parlement vote les lois ; le gouvernement conduit la politique nationale ; les collectivités gèrent les affaires locales.",
+    "Droits et devoirs": "Repérez le droit en jeu, ses limites prévues par la loi et les droits des autres personnes. Une situation concrète aide à distinguer une liberté d’une obligation.",
+    "Histoire géographie et culture": "Situez ce fait dans la chronologie ou sur la carte, puis reliez-le à son rôle dans la France d’aujourd’hui.",
+    "Vivre dans la société française": "Cherchez le service compétent et vérifiez les conditions de la démarche selon la situation personnelle sur les sites officiels.",
+}
+
+
 PRACTICE = read("practice.json")
 ADDITIONAL_PRACTICE = read("additional_practice.json")
 CENTER_DIRECTORY = read("centers.json")
@@ -70,6 +79,10 @@ def track(slug):
     search = request.args.get("q", "").strip()
     questions = [q for q in item["data"]["questions"] if (not theme or q["theme"] == theme)
                  and (not search or search.casefold() in q["prompt"].casefold())]
+    explanations = {key(q["prompt"]): q for q in item["quiz"]}
+    questions = [dict(q, practice=explanations.get(key(q["prompt"])),
+                      context=THEME_CONTEXT.get(q["theme"], "Consultez la fiche officielle de ce thème."))
+                 for q in questions]
     themes = list(dict.fromkeys(q["theme"] for q in item["data"]["questions"]))
     return render_template("track.html", slug=slug, item=item, questions=questions,
                            themes=themes, theme=theme, search=search)
