@@ -51,6 +51,27 @@ for track in TRACKS.values():
 for question in ADDITIONAL_PRACTICE:
     TRACKS[question["mode"]]["quiz"].append(question)
 
+# Only reviewed choices are served in quizzes. The full answer bank remains
+# available for catalogue explanations, where no distractors are displayed.
+REVIEWED_RESIDENT_CHOICES = read("reviewed_resident_choices.json")
+REVIEWED_RESIDENT_EXPLANATIONS = read("reviewed_resident_explanations.json")
+for slug in ("resident", "naturalisation"):
+    track = TRACKS[slug]
+    track["catalogue_answers"] = track["quiz"]
+    base = [q for q in track["quiz"] if "category" in q]
+    original = [q for q in track["quiz"] if q.get("original")]
+    if slug == "resident":
+        by_prompt = {q["prompt"]: q for q in track["quiz"]}
+        reviewed = []
+        for prompt, wrong in REVIEWED_RESIDENT_CHOICES.items():
+            question = dict(by_prompt[prompt])
+            question["answers"] = [question["answers"][0], *wrong]
+            question["detail"] = REVIEWED_RESIDENT_EXPLANATIONS[prompt]
+            reviewed.append(question)
+        track["quiz"] = base + original + reviewed
+    else:
+        track["quiz"] = base + original
+
 POLITICS_POOL = [q for q in TRACKS["csp"]["quiz"] if q["theme"] == "Système institutionnel et politique"]
 HISTORY_POOL = [q for q in TRACKS["csp"]["quiz"] if q["theme"] == "Histoire géographie et culture"][:17]
 GEOGRAPHY_POOL = [q for q in PRACTICE if q["category"] == "Régions & paysages"]
@@ -79,7 +100,8 @@ def track(slug):
     search = request.args.get("q", "").strip()
     questions = [q for q in item["data"]["questions"] if (not theme or q["theme"] == theme)
                  and (not search or search.casefold() in q["prompt"].casefold())]
-    explanations = {key(q["prompt"]): q for q in item["quiz"]}
+    explanations = {key(q["prompt"]): q for q in item.get("catalogue_answers", item["quiz"])}
+    explanations.update({key(q["prompt"]): q for q in item["quiz"]})
     questions = [dict(q, practice=explanations.get(key(q["prompt"])),
                       context=THEME_CONTEXT.get(q["theme"], "Consultez la fiche officielle de ce thème."))
                  for q in questions]

@@ -8,8 +8,13 @@ class StudyGuideTests(unittest.TestCase):
         self.client = app.test_client()
 
     def test_exam_banks_have_four_choices_and_an_explanation(self):
-        self.assertGreaterEqual(len(TRACKS['resident']['quiz']), 170)
-        self.assertGreaterEqual(len(TRACKS['naturalisation']['quiz']), 225)
+        self.assertEqual(len(TRACKS['resident']['quiz']), 40)
+        self.assertGreaterEqual(len(TRACKS['naturalisation']['quiz']), 40)
+        for mode in ('resident', 'naturalisation'):
+            self.assertEqual(len({q['prompt'] for q in TRACKS[mode]['quiz']}), len(TRACKS[mode]['quiz']))
+            for question in TRACKS[mode]['quiz']:
+                self.assertEqual(len(question['answers']), 4)
+                self.assertEqual(len(set(question['answers'])), 4)
         for row in ADDITIONAL_PRACTICE:
             self.assertEqual(len(row['answers']), 4)
             self.assertEqual(len(set(row['answers'])), 4)
@@ -31,6 +36,15 @@ class StudyGuideTests(unittest.TestCase):
         self.assertIn('Réponse pédagogique :', page)
         self.assertIn('aucun corrigé fiable', page)
         self.assertIn('Où est le siège du Parlement européen ?', page)
+
+    def test_resident_exam_uses_reviewed_choices(self):
+        questions = {q['prompt']: q for q in TRACKS['resident']['quiz']}
+        constitution = questions['Quel texte est le plus difficile à modifier ?']
+        self.assertEqual(constitution['answers'][0], 'La Constitution')
+        self.assertIn('Le Code civil', constitution['answers'])
+        self.assertIn('article 89', constitution['detail'])
+        self.assertTrue(all('ticket de caisse' not in answer.casefold()
+                            for q in TRACKS['resident']['quiz'] for answer in q['answers']))
 
 
 if __name__ == '__main__':

@@ -1,0 +1,82 @@
+{
+  "Quel texte est le plus difficile à modifier ?": [
+    "Le Code civil",
+    "Une loi ordinaire",
+    "Un décret gouvernemental"
+  ],
+  "Quelle est la durée du mandat du conseil municipal et du maire ?": [
+    "4 ans",
+    "5 ans",
+    "7 ans"
+  ],
+  "Qu'est-ce que l'Hôtel de Matignon ?": [
+    "La résidence officielle du président de la République",
+    "Le siège de l'Assemblée nationale",
+    "Le siège du Sénat"
+  ],
+  "Combien y a-t-il de régions en France ?": [
+    "13 régions au total",
+    "22 régions au total",
+    "101 régions au total"
+  ],
+  "Quelle est la devise de l’Union européenne ?": [
+    "Liberté, Égalité, Fraternité",
+    "Unité dans la paix",
+    "Ensemble pour l'Europe"
+  ],
+  "De quelle couleur est le drapeau européen ?": [
+    "Bleu et blanc",
+    "Rouge et jaune",
+    "Vert et blanc"
+  ],
+  "En quelle année le traité de Maastricht, qui marque la fondation de l'Union européenne, a-t-il été signé ?": [
+    "1957",
+    "1986",
+    "2002"
+  ],
+  "Où est le siège du Parlement européen ?": [
+    "À Bruxelles uniquement",
+    "À Luxembourg uniquement",
+    "À Paris"
+  ],
+  "Où est le siège de la Commission européenne ?": [
+    "À Strasbourg",
+    "À Luxembourg",
+    "À Paris"
+  ],
+  "En quelle année Napoléon Ier est-il devenu empereur ?": [
+    "1789",
+    "1799",
+    "1815"
+  ],
+  "De quand date l'appel à la résistance du général de Gaulle ?": [
+    "Le 14 juillet 1789",
+    "Le 11 novembre 1918",
+    "Le 8 mai 1945"
+  ],
+  "En quelle année l'euro est-elle devenue la monnaie utilisée en France ?": [
+    "1992",
+    "1999",
+    "2010"
+  ],
+  "En quelle année a commencé la Première Guerre mondiale ?": [
+    "1870",
+    "1939",
+    "1945"
+  ],
+  "Quelle chaîne de montagnes est située entre la France et l’Espagne ?": [
+    "Les Alpes",
+    "Les Vosges",
+    "Le Jura"
+  ],
+  "Quel musée est situé à Paris ?": [
+    "Le musée des Confluences à Lyon",
+    "Le Mucem à Marseille",
+    "Le musée des Beaux-Arts de Lyon"
+  ],
+  "À quel âge commence l'instruction obligatoire des enfants ?": [
+    "2 ans",
+    "6 ans",
+    "16 ans"
+  ]
+}

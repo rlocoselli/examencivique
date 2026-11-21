@@ -29,6 +29,9 @@ function render() {
   document.getElementById('progress').style.width = `${index / shuffled.length * 100}%`;
   document.getElementById('theme').textContent = q.theme || q.category;
   document.getElementById('prompt').textContent = q.prompt;
+  document.getElementById('provenance').textContent = q.original
+    ? 'Question originale · Choix et correction rédigés pour cet entraînement.'
+    : 'Intitulé de la liste publiée · Choix et correction rédigés pour cet entraînement.';
   answers.replaceChildren(); feedback.replaceChildren(); next.hidden = true;
   q.choices.forEach((choice, i) => {
     const button = document.createElement('button'); button.type = 'button'; button.className = 'answer';
